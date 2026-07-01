@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#05070E" />
+    <meta name="description" content="Wong Jing Quan - Decision Science undergraduate at UUM specializing in Data Analytics." />
+    <meta name="author" content="Wong Jing Quan" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wong Jing Quan - Data Analytics Portfolio" />
+    <meta property="og:description" content="Turning data into clarity." />
+    <title>Wong Jing Quan - Data Analytics Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============ FIXED IMMERSIVE BACKGROUND LAYERS ============ -->
+    <div class="bg-layer" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-aurora">
+            <div class="aurora-blob a1"></div>
+            <div class="aurora-blob a2"></div>
+            <div class="aurora-blob a3"></div>
+            <div class="aurora-blob a4"></div>
+        </div>
+        <div class="bg-dots" id="bgDots"></div>
+        <div class="bg-noise"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" role="status" aria-label="Loading">
+        <div class="preloader-inner">
+            <div class="preloader-logo-txt">WJQ</div>
+            <div class="preloader-track"><div class="preloader-fill" id="preloaderFill"></div></div>
+            <div class="preloader-meta"><span id="preloaderPct">0</span>%</div>
+        </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-fill" id="scrollProgressFill"></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"><i class="fas fa-check-circle"></i><span id="toastMsg">Copied</span></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar" aria-label="Primary">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand" aria-label="Home">
+                <span class="brand-mark">WJQ</span>
+                <span class="brand-dot"></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><span class="nav-num">01</span><span class="nav-txt">Home</span></a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-num">02</span><span class="nav-txt">About</span></a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-num">03</span><span class="nav-txt">Skills</span></a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-num">04</span><span class="nav-txt">Work</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-num">05</span><span class="nav-txt">Contact</span></a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun"></i>
+                    <i class="fas fa-moon moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="status-dot"></span>
+                    <span class="hero-eyebrow-text">Available for opportunities</span>
+                </div>
+                <h1 class="hero-headline">
+                    <span class="line"><span class="word">Turning</span></span>
+                    <span class="line"><span class="word">data into</span></span>
+                    <span class="line"><span class="word gradient-shift">clarity.</span></span>
+                </h1>
+                <div class="hero-meta">
+                    <span class="meta-dash"></span>
+                    <span class="meta-text">Wong Jing Quan &nbsp;/&nbsp; Data Analytics</span>
+                </div>
+                <h2 class="hero-sub">
+                    <span id="typed"></span><span class="type-cursor">|</span>
+                </h2>
+                <p class="hero-desc">Decision Science undergraduate crafting insights through <em>analytics</em>, <em>code</em>, and <em>design</em> &mdash; obsessed with the intersection of data, business, and beautiful interfaces.</p>
+                <div class="hero-cta">
+                    <a href="assets/resume.pdf" download class="btn btn-primary magnetic">
+                        <span class="btn-inner"><i class="fas fa-arrow-down"></i> Download Resume</span>
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="#projects" class="btn btn-ghost magnetic">
+                        <span class="btn-inner">Explore Work <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-visual" aria-hidden="true">
+                <div class="orb-wrap" id="orbWrap">
+                    <div class="orb-halo"></div>
+                    <div class="orb-ring"></div>
+                    <div class="orb-image">
+                        <img src="assets/profile.jpg" alt="Wong Jing Quan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                        <div class="orb-fallback">WJQ</div>
+                    </div>
+                    <svg class="orbit orbit-a" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="180" /></svg>
+                    <svg class="orbit orbit-b" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="210" /></svg>
+                    <div class="chip chip-1"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="chip chip-2"><i class="fas fa-chart-line"></i><span>Analytics</span></div>
+                    <div class="chip chip-3"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="chip chip-4"><i class="fas fa-brain"></i><span>ML</span></div>
+                    <div class="chip chip-5"><i class="fas fa-flask"></i><span>Data Science</span></div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="hero-stats glass-card">
+            <div class="stat"><span class="stat-num" data-count="3.68">0</span><span class="stat-lbl">CGPA</span></div>
+            <div class="stat-sep"></div>
+            <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-lbl">Dean&rsquo;s List</span></div>
+            <div class="stat-sep"></div>
+            <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-lbl">Certifications</span></div>
+            <div class="stat-sep"></div>
+            <div class="stat"><span class="stat-num" data-count="22">0</span><span class="stat-lbl">Tech Stack</span></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>PYTHON</span><span class="mq-dot"></span><span>SQL</span><span class="mq-dot"></span>
+            <span>TABLEAU</span><span class="mq-dot"></span><span>POWER BI</span><span class="mq-dot"></span>
+            <span>PANDAS</span><span class="mq-dot"></span><span>NUMPY</span><span class="mq-dot"></span>
+            <span>SCIKIT-LEARN</span><span class="mq-dot"></span><span>PLOTLY</span><span class="mq-dot"></span>
+            <span>XGBOOST</span><span class="mq-dot"></span><span>SPSS</span><span class="mq-dot"></span>
+            <span>AWS</span><span class="mq-dot"></span><span>GITHUB</span><span class="mq-dot"></span>
+            <span>PYTHON</span><span class="mq-dot"></span><span>SQL</span><span class="mq-dot"></span>
+            <span>TABLEAU</span><span class="mq-dot"></span><span>POWER BI</span><span class="mq-dot"></span>
+            <span>PANDAS</span><span class="mq-dot"></span><span>NUMPY</span><span class="mq-dot"></span>
+            <span>SCIKIT-LEARN</span><span class="mq-dot"></span><span>PLOTLY</span><span class="mq-dot"></span>
+        </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>01 &mdash; About</span>
+                <h2 class="sec-title">The <em>story</em> behind the code.</h2>
+                <p class="sec-sub">A curious mind blending analytics, business thinking, and design sensibility.</p>
+            </header>
+            <div class="about-grid">
+                <div class="about-copy reveal">
+                    <p class="lead">Final-year <strong>Decision Science</strong> student at <strong>Universiti Utara Malaysia (UUM)</strong>, focused on <em>data analytics</em>, <em>business intelligence</em>, and <em>quantitative decision-making</em>.</p>
+                    <p>Outside the classroom, I invest, explore markets, and lead projects &mdash; disciplines that shape how I approach problems: structured, strategic, consistent.</p>
+                    <div class="highlights">
+                        <div class="hl glass-panel tilt" data-tilt><i class="fas fa-graduation-cap"></i><div><h4>Education</h4><p>BSc (Hons) Decision Science, UUM</p></div></div>
+                        <div class="hl glass-panel tilt" data-tilt><i class="fas fa-award"></i><div><h4>Achievement</h4><p>CGPA 3.68 &middot; Dean&rsquo;s List &times;4</p></div></div>
+                        <div class="hl glass-panel tilt" data-tilt><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Kuala Lumpur / Selangor</p></div></div>
+                        <div class="hl glass-panel tilt" data-tilt><i class="fas fa-calendar-check"></i><div><h4>Graduation</h4><p>Expected January 2027</p></div></div>
+                    </div>
+                </div>
+                <div class="edu-panel glass-card tilt reveal" data-tilt>
+                    <div class="edu-head">
+                        <div class="edu-badge"><i class="fas fa-university"></i></div>
+                        <div>
+                            <h3>Education</h3>
+                            <p class="edu-caption">Academic journey</p>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <h4 class="edu-uni">Universiti Utara Malaysia (UUM)</h4>
+                        <p class="edu-degree">Bachelor of Science (Hons) in Decision Science</p>
+                        <div class="edu-chips"><span>Data Analytics Focus</span><span>Minor in Marketing</span></div>
+                        <div class="edu-stats">
+                            <div class="edu-row"><span>CGPA</span><strong>3.68 / 4.00</strong></div>
+                            <div class="edu-bar"><div class="edu-fill" data-progress="92"></div></div>
+                            <div class="edu-row"><span>Dean&rsquo;s List</span><strong>Sem 2, 3, 4 &amp; 5</strong></div>
+                            <div class="edu-row"><span>Graduation</span><strong>January 2027</strong></div>
+                        </div>
+                    </div>
+                    <div class="edu-divider"></div>
+                    <div class="edu-item edu-item-secondary">
+                        <span class="edu-mini-tag"><i class="fas fa-book"></i> Pre-University</span>
+                        <h4 class="edu-uni">Kolej Tingkatan Enam Forest Heights, Seremban</h4>
+                        <p class="edu-degree">Malaysian Higher School Certificate (STPM)</p>
+                        <div class="edu-chips"><span>Accounting</span><span>Economics</span><span>Pengajian Perniagaan</span><span>Pengajian Am</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="interests reveal">
+                <h3 class="interests-title">Areas of Interest</h3>
+                <div class="chips">
+                    <span class="chip-tag"><i class="fas fa-chart-bar"></i> Data Analytics</span>
+                    <span class="chip-tag"><i class="fas fa-chart-pie"></i> Business Analytics</span>
+                    <span class="chip-tag"><i class="fas fa-brain"></i> Business Intelligence</span>
+                    <span class="chip-tag"><i class="fas fa-robot"></i> Artificial Intelligence</span>
+                    <span class="chip-tag"><i class="fas fa-flask"></i> Data Science</span>
+                    <span class="chip-tag"><i class="fas fa-bullhorn"></i> Marketing</span>
+                    <span class="chip-tag"><i class="fas fa-tasks"></i> Project Management</span>
+                    <span class="chip-tag"><i class="fas fa-coins"></i> Investing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+        <div class="section-glow section-glow-alt" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>02 &mdash; Skills</span>
+                <h2 class="sec-title">A <em>modern</em> analytics toolkit.</h2>
+                <p class="sec-sub">Tools I use to move from raw data to real decisions.</p>
+            </header>
+            <div class="skills-grid">
+                <article class="skill-card glass-card tilt reveal" data-tilt>
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-code"></i></div><span class="sk-count">03</span></div>
+                    <h3>Programming</h3>
+                    <p class="sk-desc">Core languages for analytics and automation.</p>
+                    <div class="sk-list">
+                        <div class="sk-item"><div class="sk-row"><span>Python</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" data-progress="90"></div></div></div>
+                        <div class="sk-item"><div class="sk-row"><span>SQL</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" data-progress="85"></div></div></div>
+                        <div class="sk-item"><div class="sk-row"><span>R Programming</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill" data-progress="60"></div></div></div>
+                    </div>
+                </article>
+                <article class="skill-card glass-card tilt reveal" data-tilt>
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-chart-line"></i></div><span class="sk-count">09</span></div>
+                    <h3>Data &amp; Visualization</h3>
+                    <p class="sk-desc">From EDA to production dashboards.</p>
+                    <div class="orbs">
+                        <span class="orb"><i class="fas fa-circle-notch"></i>Pandas</span>
+                        <span class="orb"><i class="fas fa-calculator"></i>NumPy</span>
+                        <span class="orb"><i class="fas fa-project-diagram"></i>Scikit-learn</span>
+                        <span class="orb"><i class="fas fa-chart-area"></i>Matplotlib</span>
+                        <span class="orb"><i class="fas fa-chart-line"></i>Plotly</span>
+                        <span class="orb"><i class="fas fa-tv"></i>Tableau</span>
+                        <span class="orb"><i class="fas fa-square-root-alt"></i>SPSS</span>
+                        <span class="orb"><i class="fas fa-chart-bar"></i>Power BI</span>
+                        <span class="orb"><i class="fas fa-bolt"></i>XGBoost</span>
+                    </div>
+                </article>
+                <article class="skill-card glass-card tilt reveal" data-tilt>
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-tools"></i></div><span class="sk-count">06</span></div>
+                    <h3>Software &amp; Tools</h3>
+                    <p class="sk-desc">The daily stack for shipping work.</p>
+                    <div class="orbs">
+                        <span class="orb"><i class="fab fa-microsoft"></i>MS Office</span>
+                        <span class="orb"><i class="fas fa-code"></i>VS Code</span>
+                        <span class="orb"><i class="fab fa-github"></i>GitHub</span>
+                        <span class="orb"><i class="fab fa-google"></i>Google Workspace</span>
+                        <span class="orb"><i class="fab fa-aws"></i>AWS Cloud</span>
+                        <span class="orb"><i class="fab fa-linux"></i>Linux</span>
+                    </div>
+                </article>
+                <article class="skill-card glass-card tilt reveal" data-tilt>
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-lightbulb"></i></div><span class="sk-count">07</span></div>
+                    <h3>Soft Skills</h3>
+                    <p class="sk-desc">The human side of analytics.</p>
+                    <div class="orbs soft">
+                        <span class="orb">Data Storytelling</span>
+                        <span class="orb">Analytical Thinking</span>
+                        <span class="orb">Problem Solving</span>
+                        <span class="orb">Time Management</span>
+                        <span class="orb">Adaptability</span>
+                        <span class="orb">Communication</span>
+                        <span class="orb">Continuous Learning</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section" id="certifications">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>03 &mdash; Certifications</span>
+                <h2 class="sec-title">Credentials that <em>compound</em>.</h2>
+                <p class="sec-sub">Learning validated by industry-recognized programs. Click any completed card to view.</p>
+            </header>
+            <div class="cert-grid">
+                <a href="assets/google-certificate.pdf" target="_blank" rel="noopener" class="cert-card glass-card tilt reveal" data-tilt>
+                    <div class="cert-shine"></div>
+                    <div class="cert-logo google"><i class="fab fa-google"></i></div>
+                    <div class="cert-body">
+                        <h3>Google Data Analytics</h3>
+                        <p>Professional Certificate</p>
+                        <span class="cert-status done"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <span class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/ibm-certificate.pdf" target="_blank" rel="noopener" class="cert-card glass-card tilt reveal" data-tilt>
+                    <div class="cert-shine"></div>
+                    <div class="cert-logo ibm"><i class="fas fa-atom"></i></div>
+                    <div class="cert-body">
+                        <h3>IBM Data Science</h3>
+                        <p>Professional Certificate</p>
+                        <span class="cert-status done"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <span class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="assets/comptia-certificate.pdf" target="_blank" rel="noopener" class="cert-card glass-card tilt reveal" data-tilt>
+                    <div class="cert-shine"></div>
+                    <div class="cert-logo comptia"><i class="fas fa-database"></i></div>
+                    <div class="cert-body">
+                        <h3>CompTIA Data+</h3>
+                        <p>Industry Certification</p>
+                        <span class="cert-status done"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <span class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <div class="cert-card glass-card tilt reveal" data-tilt>
+                    <div class="cert-shine"></div>
+                    <div class="cert-logo aws"><i class="fab fa-aws"></i></div>
+                    <div class="cert-body">
+                        <h3>AWS Cloud Practitioner</h3>
+                        <p>Certified Foundational</p>
+                        <span class="cert-status pending"><i class="fas fa-spinner"></i> In Progress</span>
+                    </div>
+                </div>
+                <div class="cert-card glass-card tilt reveal" data-tilt>
+                    <div class="cert-shine"></div>
+                    <div class="cert-logo pmi"><i class="fas fa-tasks"></i></div>
+                    <div class="cert-body">
+                        <h3>CAPM</h3>
+                        <p>Certified Associate in Project Management (PMI)</p>
+                        <span class="cert-status pending"><i class="fas fa-spinner"></i> In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+        <div class="section-glow section-glow-alt" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>04 &mdash; Experience</span>
+                <h2 class="sec-title">Where <em>theory</em> meets practice.</h2>
+                <p class="sec-sub">Real-world exposure that shaped the foundation.</p>
+            </header>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="tl-marker"><div class="tl-pulse"></div></div>
+                    <article class="tl-content glass-card tilt" data-tilt>
+                        <div class="tl-head">
+                            <div><h3>IT Summer Intern</h3><p class="tl-company">Cygnus Technology Solutions Sdn. Bhd.</p></div>
+                            <span class="tl-date">Jun 2023 &mdash; Sep 2023</span>
+                        </div>
+                        <ul class="tl-list">
+                            <li><i class="fas fa-check"></i> Configured enterprise computer systems</li>
+                            <li><i class="fas fa-check"></i> Supported network infrastructure</li>
+                            <li><i class="fas fa-check"></i> Installed &amp; configured VoIP phones, printers, CCTV, and access points</li>
+                            <li><i class="fas fa-check"></i> Performed hardware troubleshooting</li>
+                            <li><i class="fas fa-check"></i> Assisted with corporate virtual meetings and remote IT support</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>05 &mdash; Selected Work</span>
+                <h2 class="sec-title">Selected <em>work</em>.</h2>
+                <p class="sec-sub">Data problems, engineered end-to-end.</p>
+            </header>
+            <div class="filters reveal">
+                <button class="filter-btn active magnetic" data-filter="all">All <span class="fc">3</span></button>
+                <button class="filter-btn magnetic" data-filter="optimization">Optimization</button>
+                <button class="filter-btn magnetic" data-filter="dashboard">Dashboard</button>
+                <button class="filter-btn magnetic" data-filter="system">System</button>
+            </div>
+            <div class="projects-grid">
+                <article class="proj-card glass-card tilt reveal" data-category="optimization" data-tilt>
+                    <div class="proj-cover">
+                        <div class="proj-grad grad-1"></div>
+                        <div class="proj-mesh"></div>
+                        <i class="fas fa-utensils proj-icon"></i>
+                        <span class="proj-num">01</span>
+                        <span class="proj-badge">FYP</span>
+                    </div>
+                    <div class="proj-body">
+                        <span class="proj-cat">Optimization &middot; Final Year Project</span>
+                        <h3>Optimizing Dietary Plans for Athletic Weight Gain in Malaysia <span class="proj-sub">A Linear Programming Approach</span></h3>
+                        <p>A Simplex LP model optimized 10 Malaysian foods for hypertrophy. For the baseline athlete, it achieved a <strong>2,760 kcal</strong> total intake for <strong>RM 15.01/day</strong>. Tested across a 10-athlete cohort, it mathematically proved hitting Vitamin D targets exclusively via whole foods violates national serving limits.</p>
+                        <div class="proj-tags"><span>Linear Programming</span><span>Simplex</span><span>Sports Nutrition</span><span>Decision Science</span></div>
+                        <a href="assets/fyp-poster.pdf" target="_blank" rel="noopener" class="proj-btn live"><i class="fas fa-file-pdf"></i> View FYP Poster <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="proj-card glass-card tilt reveal" data-category="dashboard" data-tilt>
+                    <div class="proj-cover">
+                        <div class="proj-grad grad-2"></div>
+                        <div class="proj-mesh"></div>
+                        <i class="fas fa-chart-pie proj-icon"></i>
+                        <span class="proj-num">02</span>
+                    </div>
+                    <div class="proj-body">
+                        <span class="proj-cat">Dashboard</span>
+                        <h3>Asset Allocation Dashboard <span class="proj-sub">Infinity 6 Protocol</span></h3>
+                        <p>Quantitative finance dashboard in Python for analyzing and optimizing investment portfolios with real-time performance tracking and visual attribution.</p>
+                        <div class="proj-tags"><span>Python</span><span>Plotly</span><span>Quant Finance</span></div>
+                        <a href="https://github.com/WONG-JING-QUAN/investment-automation-system" target="_blank" rel="noopener" class="proj-btn live"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="proj-card glass-card tilt reveal" data-category="system" data-tilt>
+                    <div class="proj-cover">
+                        <div class="proj-grad grad-3"></div>
+                        <div class="proj-mesh"></div>
+                        <i class="fas fa-boxes proj-icon"></i>
+                        <span class="proj-num">03</span>
+                    </div>
+                    <div class="proj-body">
+                        <span class="proj-cat">System</span>
+                        <h3>Stock &amp; Customer Management System</h3>
+                        <p>Full CRUD management platform built with Python and SQLite for inventory, customer, and database operations.</p>
+                        <div class="proj-tags"><span>Python</span><span>SQLite</span><span>CRUD</span></div>
+                        <a href="https://github.com/WONG-JING-QUAN/stock-customer-management" target="_blank" rel="noopener" class="proj-btn live"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+        <div class="section-glow section-glow-alt" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>06 &mdash; Contact</span>
+                <h2 class="sec-title">Let&rsquo;s <em>build</em> something.</h2>
+                <p class="sec-sub">Open to collaborations, conversations, and coffee.</p>
+            </header>
+            <div class="contact-grid">
+                <button class="ct-card glass-card tilt reveal" data-tilt data-copy="wongquan23@gmail.com">
+                    <div class="ct-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="ct-body"><h3>Email</h3><p>wongquan23@gmail.com</p></div>
+                    <span class="ct-arrow copy-hint"><i class="fas fa-copy"></i></span>
+                </button>
+                <button class="ct-card glass-card tilt reveal" data-tilt data-copy="+60169871716">
+                    <div class="ct-icon"><i class="fas fa-phone"></i></div>
+                    <div class="ct-body"><h3>Phone</h3><p>+60 16-987 1716</p></div>
+                    <span class="ct-arrow copy-hint"><i class="fas fa-copy"></i></span>
+                </button>
+                <a href="https://www.linkedin.com/in/jingquanwong" target="_blank" rel="noopener" class="ct-card glass-card tilt reveal" data-tilt>
+                    <div class="ct-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="ct-body"><h3>LinkedIn</h3><p>/in/jingquanwong</p></div>
+                    <span class="ct-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://github.com/WONG-JING-QUAN" target="_blank" rel="noopener" class="ct-card glass-card tilt reveal" data-tilt>
+                    <div class="ct-icon"><i class="fab fa-github"></i></div>
+                    <div class="ct-body"><h3>GitHub</h3><p>@WONG-JING-QUAN</p></div>
+                    <span class="ct-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <div class="ct-card glass-card tilt reveal" data-tilt>
+                    <div class="ct-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="ct-body"><h3>Location</h3><p>Kuala Lumpur / Selangor</p></div>
+                    <div class="avail"><span class="avail-dot"></span> Open to remote &amp; onsite</div>
+                </div>
+                <div class="ct-card cta-card tilt reveal" data-tilt>
+                    <div class="ct-icon"><i class="fas fa-paper-plane"></i></div>
+                    <div class="ct-body"><h3>Ready to talk?</h3><p>Let&rsquo;s build something great together.</p></div>
+                    <div class="cta-btns">
+                        <a href="mailto:wongquan23@gmail.com" class="cta-btn cta-btn-white"><i class="fas fa-envelope"></i> Say Hello</a>
+                        <a href="https://wa.me/qr/3EE53P34534GM1" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ============ FOOTER (no "Handcrafted" line) ============ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">WJQ<span class="brand-dot"></span></div>
+                <p class="footer-tag">Turning data into <em>clarity</em>.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 Wong Jing Quan. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/jingquanwong" target="_blank" rel="noopener" aria-label="LinkedIn" class="magnetic"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/WONG-JING-QUAN" target="_blank" rel="noopener" aria-label="GitHub" class="magnetic"><i class="fab fa-github"></i></a>
+                <a href="mailto:wongquan23@gmail.com" aria-label="Email" class="magnetic"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/qr/3EE53P34534GM1" target="_blank" rel="noopener" aria-label="WhatsApp" class="magnetic"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-top magnetic" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="ripples" id="ripples" aria-hidden="true"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

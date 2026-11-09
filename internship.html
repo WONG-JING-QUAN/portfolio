@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#05070E" />
+    <meta name="description" content="Internship e-portfolio of Wong Jing Quan: Data Analyst Intern at Rhee Analytics Sdn. Bhd. (3 August to 2 November 2026), with the practicum project and 13 weekly reports." />
+    <meta name="author" content="Wong Jing Quan" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Internship Experience - Wong Jing Quan" />
+    <meta property="og:description" content="Data Analyst Intern at Rhee Analytics Sdn. Bhd. - practicum project and 13 weekly reports." />
+    <title>Internship Experience - Wong Jing Quan</title>
+</head>
+<body>
+
+    <!-- ============ FIXED IMMERSIVE BACKGROUND LAYERS ============ -->
+    <div class="bg-layer" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-aurora">
+            <div class="aurora-blob a1"></div>
+            <div class="aurora-blob a2"></div>
+            <div class="aurora-blob a3"></div>
+            <div class="aurora-blob a4"></div>
+        </div>
+        <div class="bg-dots" id="bgDots"></div>
+        <div class="bg-noise"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" role="status" aria-label="Loading">
+        <div class="preloader-inner">
+            <div class="preloader-logo-txt">WJQ</div>
+            <div class="preloader-track"><div class="preloader-fill" id="preloaderFill"></div></div>
+            <div class="preloader-meta"><span id="preloaderPct">0</span>%</div>
+        </div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-fill" id="scrollProgressFill"></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"><i class="fas fa-check-circle"></i><span id="toastMsg">Copied</span></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar" aria-label="Primary">
+        <div class="nav-inner">
+            <a href="index.html#home" class="nav-brand" aria-label="Home">
+                <span class="brand-mark">WJQ</span>
+                <span class="brand-dot"></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link"><span class="nav-num">01</span><span class="nav-txt">Home</span></a></li>
+                <li><a href="index.html#about" class="nav-link"><span class="nav-num">02</span><span class="nav-txt">About</span></a></li>
+                <li><a href="index.html#skills" class="nav-link"><span class="nav-num">03</span><span class="nav-txt">Skills</span></a></li>
+                <li><a href="internship.html" class="nav-link" aria-current="page"><span class="nav-num">04</span><span class="nav-txt">Internship</span></a></li>
+                <li><a href="index.html#projects" class="nav-link"><span class="nav-num">05</span><span class="nav-txt">Work</span></a></li>
+                <li><a href="index.html#contact" class="nav-link"><span class="nav-num">06</span><span class="nav-txt">Contact</span></a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun"></i>
+                    <i class="fas fa-moon moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+    <section class="page-hero" id="top">
+        <div class="container">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" aria-hidden="true"></i><span aria-current="page">Internship</span></nav>
+            <div><span class="sec-tag"><span class="tag-dot"></span>SQQXK4946 Industrial Training &middot; A253</span></div>
+            <h1 class="page-title">Internship <em>Experience</em>.</h1>
+            <p class="page-lead">Data Analyst Intern at <strong>Rhee Analytics Sdn. Bhd.</strong>, Kuala Lumpur &middot; 3 August 2026 – 2 November 2026 (13 weeks)</p>
+            <p class="page-project">Development of an Automated Data Pipeline and Excel-Based Stock Screener Using SGX Insider Disclosure Data</p>
+            <nav class="jump" aria-label="On this page">
+                <a class="chip-tag" href="#overview"><i class="fas fa-building"></i> Overview</a>
+                <a class="chip-tag" href="#project"><i class="fas fa-diagram-project"></i> Practicum project</a>
+                <a class="chip-tag" href="#weekly"><i class="fas fa-calendar-week"></i> Weekly reports</a>
+                <a class="chip-tag" href="#terms"><i class="fas fa-book"></i> Key terms</a>
+                <a class="chip-tag" href="#declaration"><i class="fas fa-file-signature"></i> Declaration &amp; references</a>
+            </nav>
+            <div class="i-stats glass-card">
+                <div class="stat"><span class="i-num" data-count="13">13</span><span class="stat-lbl">Weeks on site</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="i-num" data-count="49632">49,632</span><span class="stat-lbl">PDF filings audited</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="i-num" data-count="39516">39,516</span><span class="stat-lbl">Unique filings found</span></div>
+                <div class="stat-sep"></div>
+                <div class="stat"><span class="i-num" data-count="85">85</span><span class="stat-lbl">Named formulas</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="overview">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>01 &mdash; Overview</span>
+                <h2 class="sec-title">The <em>organisation</em> and my role.</h2>
+                <p class="sec-sub">Who I worked with, what I was responsible for, and what I delivered.</p>
+            </header>
+            <div class="fact-card glass-card reveal">
+                <dl class="fact-grid">
+                    <div class="fact"><dt>Organisation</dt><dd>Rhee Analytics Sdn. Bhd., Kuala Lumpur</dd></div>
+                    <div class="fact"><dt>Position</dt><dd>Data Analyst Intern</dd></div>
+                    <div class="fact"><dt>Industrial supervisor</dt><dd>Mr Jonison Lau Yik Tien, Analyst</dd></div>
+                    <div class="fact"><dt>Academic supervisor</dt><dd>Dr Shanizan Herman bin Mohd Radzi</dd></div>
+                    <div class="fact"><dt>Training period</dt><dd>3 August 2026 – 2 November 2026 (13 weeks)</dd></div>
+                    <div class="fact"><dt>Working days and hours</dt><dd>Tuesday to Saturday, 11:00 am – 8:00 pm</dd></div>
+                    <div class="fact"><dt>Programme</dt><dd>Bachelor of Science with Honours (Decision Science)</dd></div>
+                </dl>
+            </div>
+            <div class="ov-grid">
+                <article class="prose-card glass-card reveal">
+                    <div class="card-head"><div class="card-icon"><i class="fas fa-building"></i></div><h3>Organisation Profile</h3></div>
+                    <div class="prose">
+<p>Rhee Analytics Sdn. Bhd. is a financial data analytics company in Bangsar, Kuala Lumpur, registered in Malaysia in 2022 (Company No. 202201020482 (1466179-M)) (Rhee Analytics Sdn. Bhd., 2026). The company provides data analytics services to its affiliate, Rhee Capital, a boutique asset management firm in Hong Kong that was established in 2015 and is licensed by the Securities and Futures Commission of Hong Kong for asset management (Maukerja, n.d.; Securities and Futures Commission, n.d.).</p>
+<p>The company’s vision is to help its clients collect, clean, build and analyse financial data at the highest possible standard (Maukerja, n.d.). In practice, the team collects company filings and market data from the Singapore Exchange (SGX), Hong Kong Exchanges and Clearing (HKEX) and the United States market, turns them into clean databases, and builds screening tools that support equity research and investment decisions.</p>
+                    </div>
+                </article>
+                <div class="ov-stack">
+                    <article class="prose-card glass-card reveal">
+                        <div class="card-head"><div class="card-icon"><i class="fas fa-user-tie"></i></div><h3>My Role</h3></div>
+                        <div class="prose"><p>I joined the company as a Data Analyst Intern from 3 August to 2 November 2026, working on-site from Tuesday to Saturday under the supervision of Mr Jonison Lau Yik Tien (Analyst). My main project was the SGX insider disclosure pipeline and the SGX Stock Screener, and I also supported the team with HKEX and US market data tasks.</p></div>
+                    </article>
+                    <article class="prose-card glass-card reveal">
+                        <div class="card-head"><div class="card-icon"><i class="fas fa-clipboard-list"></i></div><h3>Key Responsibilities</h3></div>
+                        <ul class="tl-list">
+                            <li><i class="fas fa-check"></i> <span>Building and maintaining automated scripts that collect financial data from SGX, HKEX and US sources.</span></li>
+                            <li><i class="fas fa-check"></i> <span>Extracting structured data from PDF filings and checking it against the original documents.</span></li>
+                            <li><i class="fas fa-check"></i> <span>Cleaning, combining and processing data with Python, DuckDB and Power Query.</span></li>
+                            <li><i class="fas fa-check"></i> <span>Building and improving Excel stock screeners with formulas and VBA.</span></li>
+                            <li><i class="fas fa-check"></i> <span>Scheduling daily runs, monitoring logs and fixing failures.</span></li>
+                            <li><i class="fas fa-check"></i> <span>Writing README documentation so other team members can run and maintain each tool.</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <div class="i-gallery" data-slot="workplace"><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/workplace-rhee-office.webp" aria-label="Enlarge image"><img src="assets/internship/workplace-rhee-office.webp" alt="Three people standing in front of the Rhee Analytics sign at the office entrance" width="1009" height="1280" loading="lazy" decoding="async" /></a><figcaption><b>Rhee Analytics office,</b> Bangsar, Kuala Lumpur.</figcaption></figure><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/workplace-desk-screener.webp" aria-label="Enlarge image"><img src="assets/internship/workplace-desk-screener.webp" alt="Office workstation with the SGX Stock Screener open in Excel on the monitor" width="1800" height="1350" loading="lazy" decoding="async" /></a><figcaption><b>My workstation</b> with the SGX Stock Screener open in Excel.</figcaption></figure><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/workplace-desk-formulas.webp" aria-label="Enlarge image"><img src="assets/internship/workplace-desk-formulas.webp" alt="Monitor showing the screener's formula reference sheet listing the named formulas" width="1350" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>The screener&rsquo;s formula reference sheet,</b> which lists each named formula and what it does.</figcaption></figure></div>
+            <h3 class="sub-head"><i class="fas fa-trophy"></i> Contributions and Achievements</h3>
+            <div class="contrib-grid">
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h4>SGX insider pipeline</h4>
+                    <p>Built from scratch the steps that identify, extract, check and process SGX Forms 1, 3, 5 and 6, and set the whole pipeline to run automatically every weeknight.</p>
+                </article>
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Data quality</h4>
+                    <p>Audited 49,632 PDF filings and built a review tool that links every doubtful record to its original PDF.</p>
+                </article>
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-filter"></i></div>
+                    <h4>SGX Stock Screener</h4>
+                    <p>Rebuilt the screener as 85 small named formulas so filters are easy to add, and added new filters, sorting and a live match count.</p>
+                </article>
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h4>HKEX Stock Screener V3</h4>
+                    <p>Reduced the opening time from about five minutes to a few seconds and added a settings sheet for non-technical users.</p>
+                </article>
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-arrows-rotate"></i></div>
+                    <h4>HKEX reports</h4>
+                    <p>Replaced old SAS and PHP programs with Python and DuckDB versions that reproduced the previous results.</p>
+                </article>
+                <article class="contrib glass-card reveal">
+                    <div class="card-icon"><i class="fas fa-calendar-days"></i></div>
+                    <h4>US market data</h4>
+                    <p>Built an earnings-date pipeline that combines several sources, and a new master table for the US Stock Screener.</p>
+                </article>
+            </div>
+            <h3 class="sub-head"><i class="fas fa-toolbox"></i> Skills Applied and Gained</h3>
+            <div class="skill-split">
+                <div class="glass-card reveal"><h4><i class="fas fa-code"></i> Technical skills</h4><div class="orbs"><span class="orb">Python (pandas, Selenium, pdfplumber)</span><span class="orb">DuckDB SQL</span><span class="orb">Power Query</span><span class="orb">Excel LAMBDA formulas</span><span class="orb">VBA</span><span class="orb">Windows batch scripting</span><span class="orb">Task Scheduler</span></div></div>
+                <div class="glass-card reveal"><h4><i class="fas fa-handshake"></i> Professional skills</h4><div class="orbs soft"><span class="orb">Data validation</span><span class="orb">Root-cause analysis</span><span class="orb">Testing before and after every change</span><span class="orb">Technical writing</span><span class="orb">Explaining technical work clearly to my supervisor</span></div></div>
+            </div>
+            <h3 class="sub-head" id="recommendation"><i class="fas fa-award"></i> Recommendation from my industrial supervisor</h3>
+            <figure class="rec-card glass-card reveal">
+                <i class="fas fa-quote-left rec-mark" aria-hidden="true"></i>
+                <blockquote class="prose">
+                    <p>His main project was an automated data pipeline for Singapore Exchange (SGX) insider disclosure filings. He built the steps that read and extract data from thousands of PDF filings, checked the results carefully against the original documents, and set the whole process to run automatically every night. He also rebuilt our SGX Stock Screener in Excel so that new filters can be added easily, and redesigned our HKEX Stock Screener, cutting its opening time from about five minutes to a few seconds. In addition, he replaced several of our older SAS and PHP programs with faster Python, SQL and DuckDB versions, and built a pipeline that collects US earnings dates from several sources.</p>
+                    <p>What stood out most was his attention to detail and his careful approach to problem solving. When results looked wrong, he traced the cause step by step instead of guessing, and he tested every change against real data before relying on it. He wrote clear documentation for each tool so that other team members can continue using them, and he kept me updated on his progress and on any issues he found. He was reliable, willing to take on unfamiliar tasks, and learned new tools such as DuckDB, Power Query and Selenium quickly.</p>
+                    <p>Based on his performance during the internship, I am confident that Jing Quan will be a valuable addition to any organisation looking for a data analyst or a similar role. I recommend him without reservation.</p>
+                </blockquote>
+                <figcaption><strong>Jonison Lau Yik Tien</strong>, Analyst, Rhee Analytics Sdn. Bhd. <span>&middot; Excerpt from his letter of recommendation, 2 November 2026</span></figcaption>
+                <div class="rec-actions">
+                    <a href="assets/recommendation-letter.pdf" target="_blank" rel="noopener" class="btn btn-primary magnetic"><span class="btn-inner"><i class="fas fa-file-signature"></i> View the signed letter (PDF)</span><span class="btn-glow"></span></a>
+                </div>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="project">
+        <div class="section-glow section-glow-alt" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>02 &mdash; Practicum Project</span>
+                <h2 class="sec-title">From SGX filings to a <em>stock screener</em>.</h2>
+                <p class="sec-sub">Development of an Automated Data Pipeline and Excel-Based Stock Screener Using SGX Insider Disclosure Data</p>
+            </header>
+            <dl class="glance glass-card reveal">
+                <div><dt>Format</dt><dd>Python data pipeline and Excel stock screener, documented in a practicum proposal and 13 weekly reports</dd></div>
+                <div><dt>My role</dt><dd>Data Analyst Intern; main project: the SGX insider disclosure pipeline and the SGX Stock Screener</dd></div>
+                <div><dt>Tools</dt><dd>Python, pandas, pypdf, pdfplumber, Selenium, Requests, Power Query, Excel LAMBDA formulas, VBA, Windows batch files and Task Scheduler</dd></div>
+                <div><dt>Data</dt><dd>SGX insider filings (Forms 1, 3, 5 and 6), share buy-back announcements, daily prices and the SGX stock screener list</dd></div>
+            </dl>
+            <div class="prose readable reveal">
+<p>During the practicum at Rhee Analytics Sdn. Bhd. as a Data Analyst Intern, the project focuses on insider disclosure data from the Singapore Exchange. When directors, chief executive officers and substantial shareholders of SGX-listed companies change their shareholdings, they are required to file disclosure forms, which are published as PDF announcements on the SGX website. These filings contain useful information such as the reporting person, transaction date, number of shares, price and change in ownership, which can indicate how insiders view their company. However, this information is spread across thousands of individual PDF documents and cannot be analysed directly.</p>
+<p>Therefore, this project aims to develop an automated end-to-end data pipeline that collects, extracts, validates and processes SGX insider disclosure data, together with an Excel-based stock screener that presents the processed data for fast filtering and analysis. The project is intended to reduce repetitive manual work, improve the accuracy and consistency of the data, and provide a practical decision-support tool for analysing listed companies based on insider activity, share buy-backs and market data.</p>
+            </div>
+
+            <h3 class="sub-head"><i class="fas fa-triangle-exclamation"></i> The problem in numbers</h3>
+            <div class="num-grid">
+                <div class="num-card glass-panel reveal"><strong>49,632</strong><span>PDF files in the processed archive</span></div>
+                <div class="num-card glass-panel reveal"><strong>39,516</strong><span>unique submissions identified by the audit</span></div>
+                <div class="num-card glass-panel reveal"><strong>10,114</strong><span>submissions with both the DI and DIb versions</span></div>
+                <div class="num-card glass-panel reveal"><strong>29,356</strong><span>submissions with only the DIb version</span></div>
+                <div class="num-card glass-panel reveal"><strong>46</strong><span>submissions with only the DI version</span></div>
+                <div class="num-card glass-panel reveal"><strong>5,000+</strong><span>historical rows in which one checkbox option was never captured</span></div>
+                <div class="num-card glass-panel reveal"><strong>~4,000</strong><span>characters in the single formula behind the old screener</span></div>
+            </div>
+            <details class="i-details glass-card">
+                <summary>Read the full problem statement <i class="fas fa-chevron-down chev" aria-hidden="true"></i></summary>
+                <div class="prose">
+<p>The previous process of collecting and preparing SGX insider disclosure data required a large amount of manual effort. Disclosure files had to be downloaded and checked individually, and the scripts had to be launched manually. An audit of 49,632 PDF files in the processed archive identified 39,516 unique submissions, of which only 10,114 had both the DI and DIb versions, while 29,356 had only the DIb version and 46 had only the DI version. Many DI files were XFA dynamic forms that displayed only a “Please wait” message and could not be read by normal PDF text extraction. This made it difficult to confirm whether the archive was complete and which file version should be used.</p>
+<p>The extraction of data from the filings was also difficult because the forms use inconsistent layouts and contain checkboxes, multiple shareholders and multiple transaction tables. Errors at this stage often did not stop the program, but instead produced output that looked reasonable but was wrong. For example, one checkbox option describing a corporate action had never been captured in more than 5,000 historical rows, because its tick mark was lost during the PDF-to-text conversion. Other silent problems included dates whose day and month were swapped by Excel, ticker codes such as 5E2 being converted into scientific notation, and duplicate or missing files.</p>
+<p>In addition, the existing Excel stock screener was difficult to maintain, as it was driven by a single formula of about 4,000 characters that was close to the Excel formula length limit. Adding or changing a filter required editing this long formula, and some filters returned incorrect results.</p>
+<p>Therefore, an automated and validated data pipeline is required to collect and process SGX insider disclosure data with minimal manual intervention, together with a modular stock screener that is easy to use and maintain. This project develops such a solution so that updated data can flow from the SGX website to the screener with consistent quality.</p>
+                </div>
+            </details>
+
+            <h3 class="sub-head" id="objectives"><i class="fas fa-bullseye"></i> Objectives and the weeks that met them</h3>
+            <div class="obj-grid">
+                <article class="obj-card glass-card reveal" id="objective-1">
+                    <span class="obj-num">Objective 1</span>
+                    <h4>To automate the collection and extraction of SGX insider disclosure filings (Forms 1, 3, 5 and 6, including XFA dynamic PDFs) into a standardised and structured dataset.</h4>
+                    <p class="obj-work"><b>Main work:</b> Scheduled scrapers, PDF-to-text conversion, one common 46-column format for all forms, one-click pipeline, daily price and company-list feeds.</p>
+                    <div class="week-chips" aria-label="Weeks that addressed objective 1"><a class="week-chip" href="#week-01">W01</a><a class="week-chip" href="#week-02">W02</a><a class="week-chip" href="#week-04">W04</a><a class="week-chip" href="#week-06">W06</a><a class="week-chip" href="#week-07">W07</a></div>
+                </article>
+                <article class="obj-card glass-card reveal" id="objective-2">
+                    <span class="obj-num">Objective 2</span>
+                    <h4>To validate the extracted data against the original filings in order to ensure its accuracy and completeness.</h4>
+                    <p class="obj-work"><b>Main work:</b> Archive audit, field-by-field comparison with the original PDFs, checks on buy-back data, review tool linked to each PDF, re-testing all forms after every fix.</p>
+                    <div class="week-chips" aria-label="Weeks that addressed objective 2"><a class="week-chip" href="#week-01">W01</a><a class="week-chip" href="#week-02">W02</a><a class="week-chip" href="#week-04">W04</a><a class="week-chip" href="#week-07">W07</a></div>
+                </article>
+                <article class="obj-card glass-card reveal" id="objective-3">
+                    <span class="obj-num">Objective 3</span>
+                    <h4>To develop a modular and user-friendly Excel stock screener that supports the filtering and analysis of SGX-listed companies based on insider activity, share buy-backs and market data.</h4>
+                    <p class="obj-work"><b>Main work:</b> SGX master table, screener rebuilt with 85 named formulas, new filters and sorting, daily data feeds, usability review.</p>
+                    <div class="week-chips" aria-label="Weeks that addressed objective 3"><a class="week-chip" href="#week-05">W05</a><a class="week-chip" href="#week-06">W06</a><a class="week-chip" href="#week-07">W07</a></div>
+                </article>
+            </div>
+            <div class="matrix-wrap glass-card reveal">
+                <table class="matrix">
+                    <caption>Objective coverage by week</caption>
+                    <thead><tr><th scope="col"><span class="sr-only">Objective</span></th><th scope="col"><a href="#week-01" aria-label="Week 1"><span class="m-w">W</span>1</a></th><th scope="col"><a href="#week-02" aria-label="Week 2"><span class="m-w">W</span>2</a></th><th scope="col"><a href="#week-03" aria-label="Week 3"><span class="m-w">W</span>3</a></th><th scope="col"><a href="#week-04" aria-label="Week 4"><span class="m-w">W</span>4</a></th><th scope="col"><a href="#week-05" aria-label="Week 5"><span class="m-w">W</span>5</a></th><th scope="col"><a href="#week-06" aria-label="Week 6"><span class="m-w">W</span>6</a></th><th scope="col"><a href="#week-07" aria-label="Week 7"><span class="m-w">W</span>7</a></th><th scope="col"><a href="#week-08" aria-label="Week 8"><span class="m-w">W</span>8</a></th><th scope="col"><a href="#week-09" aria-label="Week 9"><span class="m-w">W</span>9</a></th><th scope="col"><a href="#week-10" aria-label="Week 10"><span class="m-w">W</span>10</a></th><th scope="col"><a href="#week-11" aria-label="Week 11"><span class="m-w">W</span>11</a></th><th scope="col"><a href="#week-12" aria-label="Week 12"><span class="m-w">W</span>12</a></th><th scope="col"><a href="#week-13" aria-label="Week 13"><span class="m-w">W</span>13</a></th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Obj. 1<span class="m-lbl"> &middot; Automate collection &amp; extraction</span></th><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td></tr><tr><th scope="row">Obj. 2<span class="m-lbl"> &middot; Validate against the filings</span></th><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td></tr><tr><th scope="row">Obj. 3<span class="m-lbl"> &middot; Modular Excel screener</span></th><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-dot" aria-hidden="true"></span><span class="sr-only">Yes</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td><td><span class="m-empty" aria-hidden="true"></span><span class="sr-only">No</span></td></tr>
+                    </tbody>
+                </table>
+                <p class="matrix-note">The objectives map to weeks 1&ndash;7, as recorded in the weekly report. The remaining weeks covered related HKEX and US data work and the final handover; see the weekly reports below.</p>
+            </div>
+
+            <h3 class="sub-head"><i class="fas fa-route"></i> Methodology</h3>
+            <figure class="i-figure glass-card wide on-white reveal"><a class="zoom" href="assets/internship/sgx-workflow-figure1.webp" aria-label="Enlarge image"><img src="assets/internship/sgx-workflow-figure1.webp" alt="Eight-stage workflow diagram: web scraping, automation, PDF to text, form extraction, validation, clean and merge, screener engine and SGX stock screener, with key numbers and tools" width="1600" height="1360" style="aspect-ratio: 1600 / 1360" loading="lazy" decoding="async" /></a><figcaption><b>Figure 1:</b> End-to-end workflow of the proposed SGX data pipeline and stock screener</figcaption></figure>
+            <div class="prose readable method-text">
+<p>The project follows an end-to-end workflow of eight stages, as shown in Figure 1. In the first stage, Python scripts using Selenium and Requests access the SGX website and download the insider disclosure PDFs, share buy-back notices, daily prices and the SGX stock screener list. The raw files are saved with consistent file names in an organised folder structure. In the second stage, the scripts are automated using batch (.bat) launchers, configuration files, daily log files and Windows Task Scheduler, so that they run unattended every weeknight from Monday to Friday.</p>
+<p>In the third stage, an identifier script converts each filing into text, selects the DI (XFA) or DIb version, keeps the original layout, recovers ticked checkboxes and detects the form type, so that each file is routed to the correct extractor. In the fourth stage, separate extractors capture the required fields from Forms 1, 3, 5 and 6, such as holdings before and after the transaction, transaction dates, number of shares and prices, into one shared structure, including filings with multiple shareholders. The results are saved as long and short insider CSV files.</p>
+<p>In the fifth stage, the extracted data is validated by comparing it field by field with the original SGX filings, while an audit script flags missing or blank fields for review and all issues are recorded in log files. Every correction is regression-tested on real sample filings so that records that were already correct are not affected. In the sixth stage, Power Query cleans the column headers, assigns the correct data types, keeps dates in DD/MM/YYYY format and joins the price, company, share buy-back and insider data by ticker code into one master table for the screener.</p>
+<p>In the seventh stage, the long screener formula is broken into modular named LAMBDA formulas, with one formula for each filter, so that filters can be added or removed easily, while VBA is used for date entry and buttons. In the final stage, the Excel stock screener allows users to filter, search and sort stocks, shows a live count of matching stocks and displays the insider and share buy-back dates for each stock.</p>
+<p>Each filter in the screener will be tested against expected results to confirm that the screener output is correct. Together, these stages connect the SGX website to the final screener, so that updated data can be collected, checked and screened with minimal manual work.</p>
+            </div>
+            <h3 class="sub-head"><i class="fas fa-layer-group"></i> Workflow and technology stack</h3>
+            <figure class="i-figure glass-card wide on-white reveal"><a class="zoom" href="assets/internship/sgx-workflow-overview.webp" aria-label="Enlarge image"><img src="assets/internship/sgx-workflow-overview.webp" alt="Infographic of the SGX workflow from data sources and web scraping through PDF extraction, cleaning, database build, Power Query, the screener engine and the final Excel screener, with the technology stack and key outputs" width="1312" height="1199" style="aspect-ratio: 1312 / 1199" loading="lazy" decoding="async" /></a><figcaption><b>Figure 2:</b> Workflow and technology stack overview of the SGX data pipeline and stock screener</figcaption></figure>
+
+            <h3 class="sub-head"><i class="fas fa-camera"></i> The pipeline in practice</h3>
+            <div class="i-gallery" data-slot="project"><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/project-sgx-announcements.webp" aria-label="Enlarge image"><img src="assets/internship/project-sgx-announcements.webp" alt="SGX company announcements page listing the latest filings with date, issuer, title and category" width="1678" height="1774" style="aspect-ratio: 1678 / 1774" loading="lazy" decoding="async" /></a><figcaption><b>Stage 1, the data source:</b> the SGX company announcements page, where insider filings and share buy-back notices are published.</figcaption></figure><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/project-power-query-master.webp" aria-label="Enlarge image"><img src="assets/internship/project-power-query-master.webp" alt="Excel Power Query editor showing the master_query steps that join the price, company, buy-back and insider tables" width="1800" height="980" style="aspect-ratio: 1800 / 980" loading="lazy" decoding="async" /></a><figcaption><b>Stage 6, clean and merge:</b> the Power Query master query that joins the price, company list, buy-back and insider tables by ticker code into one master table.</figcaption></figure><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/project-formula-reference.webp" aria-label="Enlarge image"><img src="assets/internship/project-formula-reference.webp" alt="Excel formula reference sheet with the system engine formulas on the left and calculated columns and filters on the right" width="1280" height="690" style="aspect-ratio: 1280 / 690" loading="lazy" decoding="async" /></a><figcaption><b>Stage 7, screener engine:</b> the formula reference sheet. Each filter is its own named LAMBDA formula, so filters can be added or removed without editing one long formula.</figcaption></figure></div>
+
+            <h3 class="sub-head"><i class="fas fa-book-open"></i> More from the proposal</h3>
+            <details class="i-details glass-card">
+                <summary>Background of the study <i class="fas fa-chevron-down chev" aria-hidden="true"></i></summary>
+                <div class="prose">
+<p>Insider disclosure data is an important source of information in equity research. In Singapore, the interests of directors, chief executive officers and substantial shareholders are reported through standard notification forms, mainly Form 1, Form 3, Form 5 and Form 6. For example, Form 1 is filed by directors and chief executive officers, while Form 3 is filed by substantial shareholders. Each filing records the company, the reporting person, the type of transaction, the number of shares held before and after the transaction, the consideration paid and the circumstances that gave rise to the change in interest.</p>
+<p>At Rhee Analytics Sdn. Bhd., this data is collected from the SGX announcement portal and combined with other SGX datasets, such as share buy-back (repurchase) announcements, daily security prices and the SGX stock screener company list. Each filing may be published in two PDF versions: a dynamic XFA form (DI) that can only be displayed properly in Adobe Reader, and a static version (DIb) that can be read in a web browser. The layouts of the four forms are also different, and a single filing may contain several shareholders, several transactions and many checkbox selections.</p>
+<p>This project focuses on building an automated workflow using Python, pandas, pypdf, pdfplumber, Selenium, Power Query, Excel formulas and VBA. The workflow will scrape the filings, convert them into text, extract the required fields into a standard structure, validate the results, merge them with market data and present them through an interactive Excel stock screener.</p>
+                </div>
+            </details>
+            <details class="i-details glass-card">
+                <summary>Scope of the study <i class="fas fa-chevron-down chev" aria-hidden="true"></i></summary>
+                <div class="prose">
+<p>This project focuses on the automation of data collection, extraction, validation, processing and screening of SGX insider disclosure data at Rhee Analytics Sdn. Bhd.</p>
+<p>The main data sources are the insider disclosure filings (Forms 1, 3, 5 and 6) published on the SGX website, together with SGX share buy-back announcements, daily security prices and the SGX stock screener company list. The project covers both current filings and historical records, which are kept in separate current and historical output folders.</p>
+<p>The project covers the development of Python scripts for web scraping, PDF-to-text conversion and form extraction; validation and audit scripts; and Windows batch files with Task Scheduler for automated nightly runs. It also covers an Excel stock screener that uses Power Query to build the master table, named LAMBDA formulas for the filter engine, and VBA for buttons, date entry and data refresh. Supporting configuration files and README documentation are also included.</p>
+<p>The project focuses on preparing reliable data and providing a screening tool. It does not change the SGX source data and does not automatically make investment or trading decisions. Instead, the screener output supports analysts in reviewing insider activity and making their own investment decisions. Similar data tasks for HKEX and United States market data carried out during the internship are treated as related work and are not the main focus of this proposal.</p>
+                </div>
+            </details>
+            <details class="i-details glass-card">
+                <summary>Expected findings <i class="fas fa-chevron-down chev" aria-hidden="true"></i></summary>
+                <div class="prose">
+<p>The project is expected to greatly reduce the manual work required to collect and prepare SGX insider disclosure data. Once the scripts are scheduled, new filings, share buy-back notices and prices are expected to be downloaded, extracted and processed automatically every weeknight, with log files recording the result of each run.</p>
+<p>The project is also expected to produce a complete and validated insider disclosure dataset. The file audit, the field-by-field comparison with the source filings and the regression testing are expected to detect missing files, extraction errors and silent data problems before they reach the users.</p>
+<p>Overall, the modular Excel stock screener is expected to make it easier and faster for users to filter SGX-listed companies by insider activity, share buy-backs, price and sector, and to maintain the screener when new filters are needed. The project is expected to improve the efficiency, accuracy and consistency of the data workflow while providing useful information to support data-driven investment decision-making at Rhee Analytics Sdn. Bhd. and its affiliated asset management company.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="section" id="weekly">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>03 &mdash; Weekly Reports</span>
+                <h2 class="sec-title">Thirteen weeks, <em>reflected</em>.</h2>
+                <p class="sec-sub">Each week records the tasks I completed, the skills I applied, the challenges I met and how I addressed them, what I learned, and my focus for the next week.</p>
+            </header>
+            <div class="wk-layout">
+                <nav class="wk-rail glass-card" id="wkRail" aria-label="Weekly reports">
+                    <p class="wk-rail-title">Weeks</p>
+                    <ol>
+                        <li><a href="#week-01"><span class="rn">01</span><span class="rd">3–9 Aug</span></a></li>
+                        <li><a href="#week-02"><span class="rn">02</span><span class="rd">10–16 Aug</span></a></li>
+                        <li><a href="#week-03"><span class="rn">03</span><span class="rd">17–23 Aug</span></a></li>
+                        <li><a href="#week-04"><span class="rn">04</span><span class="rd">24–30 Aug</span></a></li>
+                        <li><a href="#week-05"><span class="rn">05</span><span class="rd">31 Aug–6 Sep</span></a></li>
+                        <li><a href="#week-06"><span class="rn">06</span><span class="rd">7–13 Sep</span></a></li>
+                        <li><a href="#week-07"><span class="rn">07</span><span class="rd">14–20 Sep</span></a></li>
+                        <li><a href="#week-08"><span class="rn">08</span><span class="rd">21–27 Sep</span></a></li>
+                        <li><a href="#week-09"><span class="rn">09</span><span class="rd">28 Sep–4 Oct</span></a></li>
+                        <li><a href="#week-10"><span class="rn">10</span><span class="rd">5–11 Oct</span></a></li>
+                        <li><a href="#week-11"><span class="rn">11</span><span class="rd">12–18 Oct</span></a></li>
+                        <li><a href="#week-12"><span class="rn">12</span><span class="rd">19–25 Oct</span></a></li>
+                        <li><a href="#week-13"><span class="rn">13</span><span class="rd">26 Oct–2 Nov</span></a></li>
+                    </ol>
+                </nav>
+                <div class="wk-list">
+                <article class="wk-card glass-card" id="week-01" aria-labelledby="week-01-title">
+                    <span class="wk-bignum" aria-hidden="true">01</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 1</span><span class="wk-dates"><i class="far fa-calendar"></i> 3 – 9 August 2026</span></div>
+                        <h3 class="wk-focus" id="week-01-title">SGX insider data: collecting the filings and extracting them</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-1"><i class="fas fa-bullseye"></i> Objective 1</a><a class="wk-obj" href="#objective-2"><i class="fas fa-bullseye"></i> Objective 2</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>I reported for duty at Rhee Analytics on Monday, 3 August, and was introduced to the main project I would be working on: a data pipeline for SGX insider filings. These are the forms that directors, CEOs and major shareholders of Singapore-listed companies must submit whenever their shareholdings change (Forms 1, 3, 5 and 6), which are published on the SGX company announcements page (Singapore Exchange, n.d.-a). The company already had a script that downloads these filings as PDFs, but everything after that, from reading the forms to producing clean tables, had to be built from scratch.</p>
+<p>I started with the download script because nothing else would work without reliable raw files. I tidied it into proper folders, put all the folder paths into one settings file so the project can be moved to another PC easily, and set it to run by itself every weeknight using Windows Task Scheduler. Next, I checked the PDF archive. Each filing can come in two versions, an interactive XFA form (DI) and a normal PDF (DIb), and I wanted to know how complete our archive really was. The 49,632 PDFs turned out to be 39,516 unique filings. Only about a quarter of them had both versions, most had only the normal PDF, a small number had only the XFA version, and a few hundred were exact duplicates. I put the results into an Excel report so the team could see the gaps clearly.</p>
+<p>With the raw files sorted out, I worked on turning the PDFs into text and then into tables. I changed the text conversion so it keeps the original page layout, and I designed one common 46-column table format for all four forms so that current and historical data look the same. After each change, I opened the original PDF filings and compared them field by field with the extracted tables, using real examples of every form type, to make sure each value matched. Towards the end of the week I also started on a smaller side task, extracting key accounting figures such as revenue and profit from Hong Kong results announcements.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-01"><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-01-di-dib-check.webp" aria-label="Enlarge image"><img src="assets/internship/week-01-di-dib-check.webp" alt="Office desk at Rhee Analytics with a monitor showing VS Code: the PDF extractor script on the left and a terminal comparing 10,114 DI/DIb file pairs on the right" width="960" height="1280" loading="lazy" decoding="async" /></a><figcaption><b>On site, Week 1.</b> The archive check comparing the content of the 10,114 filings that had both a DI and a DIb version, with the PDF extractor open alongside.</figcaption></figure><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-01-notes-form-checkboxes.webp" aria-label="Enlarge image"><img src="assets/internship/week-01-notes-form-checkboxes.webp" alt="Handwritten notes listing the checkbox options on Forms 1, 3, 5 and 6 and the lost tick traced to the identifier script" width="1275" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>Working notes:</b> the checkbox options on each form, and the tick lost during conversion that was traced back to the identifier step.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week I mainly used Python (Selenium for downloading, pdfplumber for reading PDFs and pandas for building tables). I also learned how to schedule scripts in Windows Task Scheduler and how to keep settings in a separate configuration file instead of writing them inside the code.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>The first problem was that many XFA files only show a “Please wait” message when opened in a browser, so normal PDF tools could not read them at all. I wrote a check to detect this message and separate those files, and then used file sizes and names to tell genuinely missing files apart from duplicates.</p>
+<p>The second problem took longer to notice. Some ticked checkboxes in the forms were disappearing during the PDF-to-text conversion, so the extractor recorded them as not selected. One filing with four shareholders was treated as a single-shareholder filing for this reason, and one checkbox option had never been captured in the whole history. Instead of relying on the tick symbol, I made the extractor read the structure of the form, such as which sections are filled in, and this fixed both cases.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>My biggest takeaway this week was that converting a PDF to text can quietly lose information. A missing tick mark does not always mean the box was not ticked. I also realised that before building anything clever, it is worth checking whether the raw data is complete, because every later step depends on it.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I plan to build the step that turns the extracted tables into analysis-ready data, and to start looking at the company’s older SAS programs for the HKEX reports.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step next" href="#week-02">Week 2 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-02" aria-labelledby="week-02-title">
+                    <span class="wk-bignum" aria-hidden="true">02</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 2</span><span class="wk-dates"><i class="far fa-calendar"></i> 10 – 16 August 2026</span></div>
+                        <h3 class="wk-focus" id="week-02-title">SGX buy-back data and processing step; starting the HKEX SAS replacement</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-1"><i class="fas fa-bullseye"></i> Objective 1</a><a class="wk-obj" href="#objective-2"><i class="fas fa-bullseye"></i> Objective 2</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This week I added a second SGX data source: share buy-back announcements, where companies report buying back their own shares (Singapore Exchange, n.d.-a). A scraper for this already existed from the previous developer, so I improved it rather than starting again. I added clear column names, split the security description into name, ISIN and ticker code, made the dates consistent and set it to run every weeknight with a log file.</p>
+<p>I then built the processing step for the insider data, again from scratch in Python and DuckDB. It cleans each transaction, separates trades made on and off the market, and adds up the shares and amounts for the full history, the last 30 days and the last 365 days. I also reorganised the project folders so that scripts, outputs, history and logs are kept apart, and used Power Query to make sure dates and numbers load correctly into Excel.</p>
+<p>Separately, my supervisor gave me a Hong Kong task. The company used to produce its HKEX insider reports with SAS, but the SAS licence has expired and the old tables can no longer be opened. I spent a good part of the week reading and documenting the SAS programs, and then started rebuilding the same logic in Python and DuckDB.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-02"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-02-buyback-scraper-code.webp" aria-label="Enlarge image"><img src="assets/internship/week-02-buyback-scraper-code.webp" alt="VS Code showing the SGX buy-back scraper with the field patterns for each announcement and the core scraping function" width="1457" height="1800" style="aspect-ratio: 1457 / 1800" loading="lazy" decoding="async" /></a><figcaption><b>The improved buy-back scraper:</b> one pattern for each field of an SGX share buy-back announcement, and the function that opens each announcement and collects its fields.</figcaption></figure><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-02-notes-insider-processing.webp" aria-label="Enlarge image"><img src="assets/internship/week-02-notes-insider-processing.webp" alt="Handwritten notes on the insider processing step: routing Form 1 tables, separating the datasets for Forms 1, 3, 5 and 6, splitting buys and sells, and the buy-back scrape" width="1282" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>Processing notes:</b> routing each form&rsquo;s tables, separating the Form 1, 3, 5 and 6 datasets, splitting buys and sells, and scheduling the buy-back scrape.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I practised DuckDB SQL for the first time on real data, together with Power Query. Reading the old SAS code was a new skill for me, as I had never used SAS before, so I learned it as I went by tracing what each part of the program did.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>When I compared the buy-back data with the original SGX announcements, a few companies had wrong or missing values, and Excel kept turning the Seatrium ticker “5E2” into a number. I fixed the extraction rule for each case and made sure ticker codes are always stored as text.</p>
+<p>For the HKEX task, I found that Excel had swapped the day and month in hundreds of dates in the old reference files (for example, 2 January became 1 February). I only noticed because some dates fell outside the month they belonged to. I used the folder names, which contain the correct month, to detect and reverse the swapped dates.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>This week showed me that the most dangerous errors are the ones that do not cause any error message. A wrong date still looks like a date. Because of this, I started comparing the output before and after every change I made.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I want to finish checking the rebuilt HKEX insider reports against the old results and start on the market capitalisation data.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-01"><i class="fas fa-arrow-left"></i> Week 1</a><a class="wk-step next" href="#week-03">Week 3 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-03" aria-labelledby="week-03-title">
+                    <span class="wk-bignum" aria-hidden="true">03</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 3</span><span class="wk-dates"><i class="far fa-calendar"></i> 17 – 23 August 2026</span></div>
+                        <h3 class="wk-focus" id="week-03-title">Finishing the HKEX insider reports and rebuilding the market capitalisation data</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>I spent the first part of the week finishing the HKEX insider reports. After several rounds of comparison, the new Python version matched the old results on almost every column, and the remaining differences were caused by source files that we no longer had. I wrote these missing files down in a list for my supervisor.</p>
+<p>My next task was the market capitalisation data for Hong Kong companies. The old script was written in PHP and sent thousands of separate requests to CCASS, Hong Kong’s central clearing and settlement system, every day (Hong Kong Exchanges and Clearing, n.d.). I replaced it with a Python script that uses price and share files the company already downloads, so it no longer depends on a slow website. I also added the date of each source figure to the output, so anyone can trace where a number came from, and switched the company names to HKEX’s own official list.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-03"><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-03-notes-hkex-market-cap.webp" aria-label="Enlarge image"><img src="assets/internship/week-03-notes-hkex-market-cap.webp" alt="Handwritten notes mapping the old HKEX capitalisation scripts, CCASS outstanding shares and the plan to replace the PHP script with Python" width="1286" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>Planning notes:</b> mapping the old HKEX capitalisation scripts and CCASS shares data before replacing the PHP script with Python.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week was mostly about data reconciliation, which means rebuilding a result from the raw data and checking it field by field against the old output. I also learned a lot about how the Hong Kong market works, such as share consolidations and companies that have more than one class of shares.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>The old PHP script had been silently dropping different companies on different computers. After reading it carefully, I found that it only saved a row if the full web page loaded, so a slow connection simply lost that company without any warning. The new script avoids this because it reads local files instead.</p>
+<p>I also made a couple of mistakes of my own this week. One change I made to remove duplicates accidentally removed a few real rows, and at one point my own checking script gave a very low accuracy figure that turned out to be a bug in the check, not in the pipeline. Both times I went back, compared the results carefully and corrected the problem before moving on.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>I learned that a data process can be wrong for a long time while looking perfectly normal, because nothing ever fails. I also learned to check my own testing tools before trusting a worrying result. Finally, I found that market value is understated for companies with unlisted share classes, which I documented so the team is aware of it.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I plan to make the SGX pipeline run fully by itself and build a tool that helps the team review any doubtful records.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-02"><i class="fas fa-arrow-left"></i> Week 2</a><a class="wk-step next" href="#week-04">Week 4 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-04" aria-labelledby="week-04-title">
+                    <span class="wk-bignum" aria-hidden="true">04</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 4</span><span class="wk-dates"><i class="far fa-calendar"></i> 24 – 30 August 2026</span></div>
+                        <h3 class="wk-focus" id="week-04-title">Automating the SGX pipeline, building a review tool, and the HKEX short-selling reports</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-1"><i class="fas fa-bullseye"></i> Objective 1</a><a class="wk-obj" href="#objective-2"><i class="fas fa-bullseye"></i> Objective 2</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This week I collected the signed duty report confirmation form from my industrial supervisor so that it could be uploaded to the UUM portal.</p>
+<p>On the SGX side, I combined all the pipeline steps into one batch file. With one double-click, or automatically at night, it now identifies the forms, extracts all four form types and then runs a data quality check. Each step writes its own log, and the run finishes cleanly even on days when there are no new filings.</p>
+<p>I then improved the data quality check into a proper review tool. It looks for blank or invalid holdings and percentages and produces an Excel list of records that need attention. Each row links straight to the original PDF, so the reviewer does not need to search for it, and records that have already been checked can be marked to be ignored next time. I also added a small dashboard with charts so the team can see data quality by year. Whenever a flagged record turned out to be an extraction mistake rather than a problem in the filing itself, I fixed the rule and re-ran all four forms to confirm that nothing else had changed.</p>
+<p>Later in the week I returned to the HKEX side and rebuilt the short-selling reports from the old SAS code. Both new reports reproduced the historical results very closely.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-04"><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-04-notes-pipeline-automation.webp" aria-label="Enlarge image"><img src="assets/internship/week-04-notes-pipeline-automation.webp" alt="Handwritten flow of the SGX insider pipeline from the scraper through Run_All.bat, the identifier, the four form extractors and the audit script" width="1275" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>Pipeline flow:</b> one batch file runs the identifier, the four form extractors and the audit script that writes the records flagged for review.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I improved my Windows batch scripting and learned how to design a tool for other people to use, not only for myself. I also became more comfortable writing flexible parsing rules for documents that do not always follow the same layout.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>Some filings of the same form type produced slightly different text layouts, so my strict search patterns worked for most files but failed on unusual ones. I changed the extractor to read within each table’s boundaries and to ignore page headers and footers, and then tested the change on real files.</p>
+<p>In the short-selling task, a date like 11/02/2015 can be read as either 11 February or 2 November. When I changed the output format, many older dates were silently moved to the wrong month. I separated the input and output date settings and compared actual dates instead of text.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>Building the review tool made me realise that a quality check is only useful if people can act on it quickly. Linking each problem record to its source document saves a lot of time and makes it more likely that the problems actually get fixed.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I will move on to the Excel side of the project: building one master table and improving the SGX Stock Screener.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-03"><i class="fas fa-arrow-left"></i> Week 3</a><a class="wk-step next" href="#week-05">Week 5 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-05" aria-labelledby="week-05-title">
+                    <span class="wk-bignum" aria-hidden="true">05</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 5</span><span class="wk-dates"><i class="far fa-calendar"></i> 31 August – 6 September 2026</span></div>
+                        <h3 class="wk-focus" id="week-05-title">Building the SGX master table and rebuilding the SGX Stock Screener</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-3"><i class="fas fa-bullseye"></i> Objective 3</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This week I focused on the part of the project that users actually see: the SGX Stock Screener in Excel. First, I used Power Query to clean the screener, insider and buy-back data and joined them into one master table, with each company’s buy-back dates listed in a single cell.</p>
+<p>The first version of the screener that I had built used one very long formula of about 4,000 characters. Every time I added a filter it became longer, and it was getting close to Excel’s limit and very difficult to change. I broke it into 85 small named formulas, one for each filter, with one final formula that combines them. Now adding or removing a filter is a small change instead of editing a huge formula.</p>
+<p>With the new structure in place, I added several new filters, such as sector, currency, filing type and days since the last insider filing. I also added sorting, a live count of matching stocks, and a button that lets users add new filters from an instruction sheet without opening the VBA editor.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-05"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-05-sgx-screener.webp" aria-label="Enlarge image"><img src="assets/internship/week-05-sgx-screener.webp" alt="SGX Stock Screener dated 3 September 2026 with the filter panel, insider filings by source table and results" width="1280" height="689" style="aspect-ratio: 1280 / 689" loading="lazy" decoding="async" /></a><figcaption><b>The rebuilt SGX Stock Screener</b> on 3 September, with the filter panel, the insider filings by source table and the results.</figcaption></figure><figure class="i-figure glass-card"><a class="zoom" href="assets/internship/week-05-notes-screener-process.webp" aria-label="Enlarge image"><img src="assets/internship/week-05-notes-screener-process.webp" alt="Handwritten screener process: import data, transform, build the master query, then set up the Name Manager formulas" width="1273" height="1800" loading="lazy" decoding="async" /></a><figcaption><b>Screener process notes:</b> import and clean each dataset, build the master query, then set up the named formulas.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I learned to use Excel’s newer features properly, especially LAMBDA and named formulas, and practised VBA for the buttons. I also checked each filter’s results in Python against the real data before trusting it.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>Some dates in the buy-back data were in month-first format and others in day-first format. I handled both formats and chose the date that made sense compared with the announcement date.</p>
+<p>One date filter returned results for “before” but nothing for “after”, and the cell showed ########. It turned out the date was stored as a plain number because an earlier macro had crashed and switched off Excel events. Rather than fixing the macro, I made the filter accept both forms of date so it no longer depends on the macro at all.</p>
+<p>I also noticed that choosing transaction type “E” returned “OE” rows as well, because the filter was matching part of the text. I changed it to exact matching.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>This week I learned that fixing the cause of a problem is usually better than patching the symptom. I also learned that a strange display such as ######## is actually a useful clue, and that I should check my assumptions against the real data early.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I plan to set up automatic daily feeds for SGX prices and the SGX company list, so the screener always has fresh data.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-04"><i class="fas fa-arrow-left"></i> Week 4</a><a class="wk-step next" href="#week-06">Week 6 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-06" aria-labelledby="week-06-title">
+                    <span class="wk-bignum" aria-hidden="true">06</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 6</span><span class="wk-dates"><i class="far fa-calendar"></i> 7 – 13 September 2026</span></div>
+                        <h3 class="wk-focus" id="week-06-title">SGX price and screener feeds, HKEX H-share data and price returns</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-1"><i class="fas fa-bullseye"></i> Objective 1</a><a class="wk-obj" href="#objective-3"><i class="fas fa-bullseye"></i> Objective 3</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>To keep the screener up to date, I built two daily data feeds. The first downloads SGX daily price files and keeps a rolling file of the latest prices, with options to fill in older dates if needed. The second opens the SGX Stock Screener website (Singapore Exchange, n.d.-b) and downloads the full list of listed companies each day.</p>
+<p>I also completed two Hong Kong tasks this week. One extracts H-share, A-share and B-share counts from the monthly return PDFs that HKEX companies publish, keeping only the latest filing for each company. The other rebuilds the old SAS price return report in Python, calculating each stock’s return over one day, one week, one month, three months and six months.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-06"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-06-sgx-screener-list.webp" aria-label="Enlarge image"><img src="assets/internship/week-06-sgx-screener-list.webp" alt="SGX Stock Screener website with the full list of listed companies being downloaded" width="1280" height="724" style="aspect-ratio: 1280 / 724" loading="lazy" decoding="async" /></a><figcaption><b>Daily company-list feed:</b> the script downloads the full list of listed companies from the SGX Stock Screener website.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I gained more experience with Selenium for automating websites, and with handling tables inside PDF files. For the price return task, I learned that SAS and Python round numbers differently, which matters when the results must match exactly.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>The SGX Stock Screener website is built in a way that hides its buttons from normal automation tools, so my script could not find the download button. After some research, I found a way to turn on the site’s accessibility features, which made the button visible to the script.</p>
+<p>Filling in older price data was slow because the script checked the files one by one. I changed it to estimate where the right file should be and then search from there, which made the process much faster.</p>
+<p>For the price returns, one missing data file from a single day caused hundreds of small-cap stocks to lose their one-week return, even though every check said the day was complete. I changed the checks so they count coverage for each data source separately.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>While matching the old SAS results I actually found some errors in the old output itself. This taught me that a reference file is useful evidence but should not be treated as automatically correct.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I want to review the SGX screener from a user’s point of view and look into an overnight scraper run that failed.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-05"><i class="fas fa-arrow-left"></i> Week 5</a><a class="wk-step next" href="#week-07">Week 7 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-07" aria-labelledby="week-07-title">
+                    <span class="wk-bignum" aria-hidden="true">07</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 7</span><span class="wk-dates"><i class="far fa-calendar"></i> 14 – 20 September 2026</span></div>
+                        <h3 class="wk-focus" id="week-07-title">Maintaining SGX data collection and reviewing the screener design</h3>
+                        <div class="wk-objs"><a class="wk-obj" href="#objective-1"><i class="fas fa-bullseye"></i> Objective 1</a><a class="wk-obj" href="#objective-2"><i class="fas fa-bullseye"></i> Objective 2</a><a class="wk-obj" href="#objective-3"><i class="fas fa-bullseye"></i> Objective 3</a></div>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>I spent part of this week looking at the SGX screener as a user would. I went through the filters, search, sorting and results table, and suggested grouping them into basic filters, advanced insider filters and display controls. I also looked at how popular online screeners such as TradingView (TradingView, n.d.) let users choose their own filters, to get ideas for a simpler filter builder in Excel.</p>
+<p>One morning I noticed the overnight screener download had not produced any data. The log showed that the script stopped two seconds after starting because it could not find the website address, which pointed to a network issue rather than a problem in the code.</p>
+<p>I also fixed the buy-back scraper’s launcher, which seemed to do nothing when double-clicked, and made the browser driver update automatically whenever Chrome updates. Finally, I built a script to find the correct SGX ticker code for old insider filings, using the company name written inside each filing.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-07"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-07-sgx-screener.webp" aria-label="Enlarge image"><img src="assets/internship/week-07-sgx-screener.webp" alt="SGX Stock Screener dated 17 September 2026 with filters, search, view and sort, columns and active filters" width="1800" height="1012" style="aspect-ratio: 1800 / 1012" loading="lazy" decoding="async" /></a><figcaption><b>Reviewing the screener as a user:</b> the filters, search, sorting and results table on 17 September.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week involved more analysis than coding: thinking about interface design from a user’s point of view, reading error logs, and matching company names carefully.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>The overnight failure could not be repeated during the day, because the script works fine when I run it manually. Instead of guessing, I listed the likely causes, such as the PC waking up before the network was ready, and a simple test for each one.</p>
+<p>When matching company names to tickers, the script sometimes picked the wrong company, for example Keppel REIT instead of Keppel Corporation. I made it confirm every match against the official SGX securities list before accepting it.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>I learned that a script can be completely correct and still fail because of when and where it runs. For scheduled jobs, the computer and network environment are just as important as the code. Good logging made this problem possible to investigate.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I will start rebuilding the HKEX Stock Screener, using what I learned from the SGX screener.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-06"><i class="fas fa-arrow-left"></i> Week 6</a><a class="wk-step next" href="#week-08">Week 8 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-08" aria-labelledby="week-08-title">
+                    <span class="wk-bignum" aria-hidden="true">08</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 8</span><span class="wk-dates"><i class="far fa-calendar"></i> 21 – 27 September 2026</span></div>
+                        <h3 class="wk-focus" id="week-08-title">Rebuilding the HKEX Stock Screener (Version 3)</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This week I applied what I had learned on the SGX screener to the HKEX screener, which covers about 2,780 Hong Kong companies and is much larger. The first problem was speed: the workbook took around five minutes to open and sometimes crashed when closing.</p>
+<p>I tested the possible causes one at a time and found that the delay came from the huge number of formula cells stored in the file, not from the calculations themselves. I solved this in two ways. The formulas are now stored as plain values when the file is saved and restored when it opens, and the heavy data preparation was moved out of Excel into Python and DuckDB. A REFRESH DATA button now downloads the source files and prepares one clean data file in under half a minute. The workbook opens in a few seconds and the file size dropped to about a fifth.</p>
+<p>Once the speed was fixed, I added the features listed in the task brief: switches for unique stocks and price returns, share type and share count columns, clearer CLEAR and RESET buttons, column moving, and a settings sheet where non-technical users can add or remove fields with buttons. I also wrote a README with a version history.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-08"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-08-hkex-screener.webp" aria-label="Enlarge image"><img src="assets/internship/week-08-hkex-screener.webp" alt="HKEX Stock Screener in Excel with the filter builder, columns panel, live match count and buttons" width="1800" height="1012" style="aspect-ratio: 1800 / 1012" loading="lazy" decoding="async" /></a><figcaption><b>The rebuilt HKEX Stock Screener</b> on 25 September, with the filter builder, a live match count and the CLEAR, RESET and REFRESH DATA buttons.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I used Excel VBA, Power Query, Python and DuckDB together, and practised performance testing, where you measure carefully before changing anything.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>Excel sometimes showed a “busy” error when settings changed during a recalculation. I added a small helper that waits until Excel is ready and then tries again.</p>
+<p>I could not run Excel in my testing environment, so I tested the settings sheet by walking through ten realistic user scenarios step by step. This found several hidden bugs before any user ran into them.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>Measuring first turned a vague “slow file” complaint into one clear cause. I also learned that moving heavy work to the right tool is often better than trying to make Excel formulas faster, and that a tool is only easy to maintain if non-technical users can understand its settings.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I will begin a new task on US earnings dates, while keeping an eye on any feedback about the new HKEX screener.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-07"><i class="fas fa-arrow-left"></i> Week 7</a><a class="wk-step next" href="#week-09">Week 9 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-09" aria-labelledby="week-09-title">
+                    <span class="wk-bignum" aria-hidden="true">09</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 9</span><span class="wk-dates"><i class="far fa-calendar"></i> 28 September – 4 October 2026</span></div>
+                        <h3 class="wk-focus" id="week-09-title">Collecting US earnings dates from several sources</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>My new task this week was to collect the next earnings date for about 4,500 US stocks that have options, so the team knows when each company will announce its results. I started with Nasdaq (Nasdaq, n.d.). By watching the website’s network traffic in the browser, I found that the page loads its data from a hidden data feed, so my script reads that directly instead of the web page. Each date is labelled as confirmed by the company, estimated, or not available.</p>
+<p>I followed the required rate limits so the script does not overload the website, with random pauses between requests, a wait before retrying and a rule to skip a ticker after repeated failures. I also added a log file, a resume point and a one-click run file.</p>
+<p>Because one source was not enough, I added Zacks (Zacks Investment Research, n.d.), Market Chameleon (Market Chameleon, n.d.), Yahoo Finance through the yfinance library (Yahoo Finance, n.d.) and Earnings Whispers (Earnings Whispers, n.d.), and wrote a summary script that combines them into one file. For Earnings Whispers, whose watchlist only holds 10 tickers at a time, I built a script that rotates the tickers through the watchlist in batches and downloads each batch through the site’s data API.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-09"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-09-nasdaq-earnings.webp" aria-label="Enlarge image"><img src="assets/internship/week-09-nasdaq-earnings.webp" alt="Nasdaq earnings page for a US stock next to the earnings-date script log" width="1280" height="698" style="aspect-ratio: 1280 / 698" loading="lazy" decoding="async" /></a><figcaption><b>Collecting US earnings dates:</b> the Nasdaq earnings page beside the script log, which records each ticker&rsquo;s date and whether it is confirmed.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week I learned how to inspect a website’s network traffic, design retry and rate-limit rules, download pages in parallel, and convert US Eastern time to Malaysia time.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>At first each ticker took about four seconds, so a full run would take more than four hours. Instead of guessing, I timed each step and found the delay came from a Windows network setting in Python. After fixing it, the full run took less than two hours.</p>
+<p>Earnings Whispers changed its website overnight, and the next scheduled run marked every ticker as “no data” and overwrote the good results from the day before. I switched the script to reading the public stock pages and added a check that stops the run, without touching any files, if the site is down.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>I learned to look at how a website loads its data before writing a scraper, to measure before optimising, and to always check that a source is healthy before overwriting existing data.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I need to decide how to pick one final date when the sources disagree, and to extend the watchlist rotation to cover the full lists.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-08"><i class="fas fa-arrow-left"></i> Week 8</a><a class="wk-step next" href="#week-10">Week 10 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-10" aria-labelledby="week-10-title">
+                    <span class="wk-bignum" aria-hidden="true">10</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 10</span><span class="wk-dates"><i class="far fa-calendar"></i> 5 – 11 October 2026</span></div>
+                        <h3 class="wk-focus" id="week-10-title">Choosing the final earnings date, data access problems and the practicum proposal</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This was a busy week with several fixes. It started with the HKEX screener, where two of the data queries suddenly stopped loading because the data provider had changed the columns in two files. I made the queries adapt to whatever columns are present and show a clear message if anything still fails.</p>
+<p>For the earnings dates, I prepared a reference sheet of the possible cases and turned it into rules that choose one final date. A confirmed date is used first, following a set order of sources. If no source has a confirmed date, the result is a date range from the earliest to the latest estimate, and the ticker is flagged to be checked again. Each source can also be switched on or off in the settings file.</p>
+<p>To cover the full ticker lists within Earnings Whispers’ daily limits, I extended the rotation script so it tracks API usage and moves on to the next account and API key when one reaches its limit. I also found out why Market Chameleon was showing “Access Denied” on the office network, and added a free VPN step to the scheduled run so the script could reach the site.</p>
+<p>At the same time, I prepared my practicum proposal, covering the project title, problem statement, objectives, scope and methodology, and sent it to my academic supervisor.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-10"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-10-access-denied.webp" aria-label="Enlarge image"><img src="assets/internship/week-10-access-denied.webp" alt="Scraper script in VS Code next to a Market Chameleon Access Denied page" width="1280" height="946" style="aspect-ratio: 1280 / 946" loading="lazy" decoding="async" /></a><figcaption><b>A data access problem:</b> Market Chameleon returned &ldquo;Access Denied&rdquo; on the office network.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I practised writing decision rules, tracking API usage, and basic network troubleshooting. Writing the proposal also helped me explain my technical work in a clearer, more academic way.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>My first guess about the website block was that our IP address had been banned, but restarting the router did not help. By changing one thing at a time, I found that the block applied to the office’s whole IPv6 network range. A VPN that can be controlled by a script was the practical solution.</p>
+<p>After adding the VPN, Chrome kept closing itself during the scheduled runs. The cause was a Windows permission setting, and once I adjusted how the task and the browser were started, the runs completed normally.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>This week taught me that data pipelines must be ready for the source data to change shape. I also learned that website limits and access rules are real project constraints, and that in the long run an official data subscription is the most reliable option for the company.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I plan to start rebuilding the US Stock Screener, while checking that the nightly earnings-date runs keep working.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-09"><i class="fas fa-arrow-left"></i> Week 9</a><a class="wk-step next" href="#week-11">Week 11 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-11" aria-labelledby="week-11-title">
+                    <span class="wk-bignum" aria-hidden="true">11</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 11</span><span class="wk-dates"><i class="far fa-calendar"></i> 12 – 18 October 2026</span></div>
+                        <h3 class="wk-focus" id="week-11-title">US Stock Screener V2: new data pipeline and screener design</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>This week I started rebuilding the US Stock Screener, which had become slow and large. I first repaired the batch files that download the data and build the master table, and then moved two of the heaviest Power Query steps into DuckDB SQL. Before replacing anything, I checked that the new SQL gave the same results as the old steps.</p>
+<p>I then built a new screener based on the design I had already used for the HKEX screener. It has a data sheet, a settings sheet where users choose which columns to show and which filters to use, and a screener sheet with four buttons for clearing filters, sorting, refreshing the data and syncing the filters. Reusing a design that already worked saved a lot of time.</p>
+<p>I kept the same layout rules as the HKEX version so users would feel at home: all filter controls sit at the top of the sheet, one empty row separates them from the results, and the results table starts below it. The settings sheet uses two tables, one listing which columns to display and how to format them, and one listing the filters, with types such as number, text, exact match, date, column comparison, show or hide, and sort. This means most future changes can be made by editing a table instead of changing code.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-11"></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>I gained more practice converting Power Query logic into SQL and building VBA tools that are driven by a settings table instead of hard-coded rules.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>The Industry filter matched part of a name, so choosing “Gas” also selected “Oil & Gas”. I changed it to match whole names only.</p>
+<p>Because the workbook was large, some Excel tasks were slow and occasionally failed. I worked in smaller steps and kept backups so I could always go back to a working version.</p>
+<p>When I first set up the settings tables, the screener showed only the column headers and no data. I traced the problem to the way the new columns were linked to the data table, fixed the link, and wrote the correct set-up steps into the README so the same mistake does not happen to the next user.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>I learned that reusing a proven design gives users the same experience across different screeners and reduces the chance of new bugs. I also saw the value of keeping rules in settings tables rather than in code, because it lets people who do not program adjust the tool themselves.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>Next week I will build one clean master table for the US screener and check the quality of every column.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-10"><i class="fas fa-arrow-left"></i> Week 10</a><a class="wk-step next" href="#week-12">Week 12 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-12" aria-labelledby="week-12-title">
+                    <span class="wk-bignum" aria-hidden="true">12</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 12</span><span class="wk-dates"><i class="far fa-calendar"></i> 19 – 25 October 2026</span></div>
+                        <h3 class="wk-focus" id="week-12-title">US master table data quality and moving the earnings pipeline to a new PC</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>I replaced the old US master files with one new master table built in DuckDB, which joins about 15 source files and gives one row for each share class. This fixed duplicate rows for companies such as Accenture and Lennar, which have more than one class of shares.</p>
+<p>I then went through every column to check its values. I found tickers written in different formats across sources (for example BRK.B and BRK-B), ratios that mixed one share class with company totals, and some rows that were counted twice. I fixed these and wrote down the reasons why some tickers were still missing, mostly foreign shares and ETFs.</p>
+<p>Later in the week, the US earnings-date files were moved to a new PC, so I updated the pipeline to work there. Each daily run now copies the latest file and re-checks only the tickers that are not yet confirmed, which makes it faster. I also revised my practicum proposal to three objectives after discussing it with my academic supervisor.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-12"></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week was mainly about data quality: checking each column carefully, comparing results before and after each change, and documenting problems clearly.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>Fixing one problem often revealed another. For example, splitting companies into share classes exposed some wrong ratios. I handled this by re-checking all columns after every change so that only the intended rows were affected.</p>
+<p>A bug in the watchlist rotation saved some tickers as blank, which wiped a few hundred earnings dates. At first I thought it was an account setting, but the log showed it was caused by a run I had stopped halfway. I restored the lost dates from earlier files and changed the script so it never overwrites a good date with a blank one.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>I learned that a value for one share class should never be mixed with a value for the whole company, and that existing good data must always be protected. I also learned to check my own first explanation against the evidence before acting on it.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>In the final week, I plan to finish the US screener clean-up, confirm that the scheduled runs work on the new PC and prepare the handover.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-11"><i class="fas fa-arrow-left"></i> Week 11</a><a class="wk-step next" href="#week-13">Week 13 <i class="fas fa-arrow-right"></i></a></footer>
+                </article>
+                <article class="wk-card glass-card" id="week-13" aria-labelledby="week-13-title">
+                    <span class="wk-bignum" aria-hidden="true">13</span>
+                    <header class="wk-head">
+                        <div class="wk-meta"><span class="wk-tag">Week 13</span><span class="wk-dates"><i class="far fa-calendar"></i> 26 October – 2 November 2026</span></div>
+                        <h3 class="wk-focus" id="week-13-title">Final checks, handover and wrap-up</h3>
+                    </header>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-list-check" aria-hidden="true"></i> Tasks Completed</h4>
+<p>My last week was about making sure every tool could keep running after I leave. I finished cleaning up the US screener by removing leftover settings and unused queries, and confirmed that the daily earnings-date runs were working on the new PC. I also wrote down the steps for the next quarter change at the end of December and reported the source-data problems I had found to the team that owns the data.</p>
+<p>Most of my time went into the handover. I updated the README files for the SGX, HKEX and US pipelines and walked my industrial supervisor through each tool, explaining how to run it and what to do if something goes wrong. Before my last day on 2 November, I also had my attendance form signed.</p>
+                    </div>
+                    <div class="wk-gallery" data-slot="week-13"><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-13-final-screener-all.webp" aria-label="Enlarge image"><img src="assets/internship/week-13-final-screener-all.webp" alt="Final SGX Stock Screener dated 28 October 2026 showing 614 matching stocks" width="1800" height="1127" style="aspect-ratio: 1800 / 1127" loading="lazy" decoding="async" /></a><figcaption><b>Final checks, 28 October:</b> the SGX Stock Screener with no filters applied, showing all 614 stocks.</figcaption></figure><figure class="i-figure glass-card shot"><a class="zoom" href="assets/internship/week-13-final-screener-filtered.webp" aria-label="Enlarge image"><img src="assets/internship/week-13-final-screener-filtered.webp" alt="The same screener narrowed by filters to one matching stock" width="1800" height="609" style="aspect-ratio: 1800 / 609" loading="lazy" decoding="async" /></a><figcaption><b>The same screener with filters applied</b>, narrowed to a single stock, with the live count updating.</figcaption></figure></div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills Applied or Developed</h4>
+<p>This week used my documentation and communication skills more than my coding skills, since each tool had to be explained clearly to someone else.</p>
+                    </div>
+                    <div class="wk-block">
+                        <h4 class="wk-label"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Challenges and How I Addressed Them</h4>
+<p>Handing over several pipelines in one week was a challenge, because each one had to be usable without me. I wrote step-by-step instructions, listed every input file and known limitation, and showed each tool working to my supervisor.</p>
+<p>It was also hard to decide how much detail to put in the documentation. Too little would leave the next person stuck, but too much would make the files hard to use. I solved this by putting a short “how to run” section at the top of each README, followed by a troubleshooting section based on the real problems I had met during the internship.</p>
+                    </div>
+                    <div class="wk-block wk-learning">
+                        <h4 class="wk-label"><i class="fas fa-lightbulb" aria-hidden="true"></i> Key Learning / Takeaway / New Insights</h4>
+<p>Looking back on the whole internship, the main lesson I take away is that good decisions depend on reliable data. Most of the serious problems I met did not cause errors; they quietly produced wrong numbers. Checking results against the source, testing every change and writing clear documentation are habits I will keep in my future work.</p>
+                    </div>
+                    <div class="wk-block wk-next">
+                        <h4 class="wk-label"><i class="fas fa-forward" aria-hidden="true"></i> Next Week&rsquo;s Focus</h4>
+<p>After the internship, I will submit my final internship report and add these weekly reports to my e-portfolio.</p>
+                    </div>
+                    <footer class="wk-foot"><a class="wk-step prev" href="#week-12"><i class="fas fa-arrow-left"></i> Week 12</a><a class="wk-step next" href="#reflection">Looking back <i class="fas fa-arrow-down"></i></a></footer>
+                </article>
+                </div>
+            </div>
+            <figure class="reflect glass-card reveal" id="reflection">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                <blockquote>
+                    <p class="reflect-lead">Looking back on the whole internship, the main lesson I take away is that good decisions depend on reliable data.</p>
+                    <p class="reflect-rest">Most of the serious problems I met did not cause errors; they quietly produced wrong numbers. Checking results against the source, testing every change and writing clear documentation are habits I will keep in my future work.</p>
+                </blockquote>
+                <figcaption><cite>Looking back &middot; Week 13 reflection</cite></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="terms">
+        <div class="section-glow section-glow-alt" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>04 &mdash; Key Terms</span>
+                <h2 class="sec-title">The <em>vocabulary</em> of the work.</h2>
+                <p class="sec-sub">Terms used throughout the weekly reports.</p>
+            </header>
+            <dl class="term-grid">
+                <div class="term glass-panel reveal"><dt>SGX / HKEX</dt><dd>Singapore Exchange and Hong Kong Exchanges and Clearing, the two stock exchanges whose data I worked with most.</dd></div>
+                <div class="term glass-panel reveal"><dt>Insider filing (Forms 1, 3, 5, 6)</dt><dd>A form that directors, CEOs and major shareholders of SGX-listed companies must file when their shareholding changes.</dd></div>
+                <div class="term glass-panel reveal"><dt>DI and DIb</dt><dd>The two versions of each SGX filing: DI is an interactive XFA form that needs Adobe Reader; DIb is a normal PDF.</dd></div>
+                <div class="term glass-panel reveal"><dt>Data pipeline</dt><dd>A chain of scripts that collects raw data, cleans it, checks it and produces a ready-to-use table, usually without manual work.</dd></div>
+                <div class="term glass-panel reveal"><dt>Scraper</dt><dd>A script that collects data from a website automatically.</dd></div>
+                <div class="term glass-panel reveal"><dt>Stock screener</dt><dd>An Excel tool that lets users filter and sort listed companies by conditions such as price, sector or insider activity.</dd></div>
+                <div class="term glass-panel reveal"><dt>CCASS</dt><dd>Hong Kong’s Central Clearing and Settlement System, which records how many shares are held.</dd></div>
+                <div class="term glass-panel reveal"><dt>SAS</dt><dd>A statistical software package the company used before for its HKEX reports; its licence has expired. The SGX pipeline does not use SAS.</dd></div>
+                <div class="term glass-panel reveal"><dt>Python / DuckDB</dt><dd>Python is the programming language I used for most scripts; DuckDB is a fast database used to run SQL queries on CSV files.</dd></div>
+                <div class="term glass-panel reveal"><dt>Power Query / LAMBDA / VBA</dt><dd>Excel tools: Power Query loads and cleans data, LAMBDA creates reusable named formulas, and VBA runs macros and buttons.</dd></div>
+                <div class="term glass-panel reveal"><dt>Task Scheduler</dt><dd>The Windows tool that runs scripts automatically at set times, for example every weeknight.</dd></div>
+                <div class="term glass-panel reveal"><dt>API</dt><dd>A web address that returns data in a machine-readable format, used instead of reading the web page.</dd></div>
+                <div class="term glass-panel reveal"><dt>Regression test</dt><dd>Comparing the output before and after a change to make sure nothing that already worked was broken.</dd></div>
+            </dl>
+        </div>
+    </section>
+
+    <section class="section" id="declaration">
+        <div class="section-glow" aria-hidden="true"></div>
+        <div class="container">
+            <header class="sec-head reveal">
+                <span class="sec-tag"><span class="tag-dot"></span>05 &mdash; Declaration &amp; References</span>
+                <h2 class="sec-title">Declaration &amp; <em>sources</em>.</h2>
+                <p class="sec-sub">AI usage declaration and the sources cited in the weekly reports (APA 7th edition).</p>
+            </header>
+            <div class="decl-grid">
+                <article class="prose-card glass-card reveal">
+                    <div class="card-head"><div class="card-icon"><i class="fas fa-robot"></i></div><h3>AI Usage Declaration</h3></div>
+                    <div class="prose">
+<p>I declare that the internship work described in this report, including the data pipelines, scripts, Excel screeners, testing and documentation, was carried out by me during my industrial training at Rhee Analytics Sdn. Bhd.</p>
+<p>I used a generative AI tool, Claude (Anthropic, 2026), during my internship and while preparing this report. During the internship, I used it as a coding and debugging assistant: I described the problems and requirements, reviewed the code it suggested, ran and tested that code on the company’s real files, and decided what to keep or change. For this report, I used it to help organise my daily logbook notes into weekly entries and to draft and improve the wording.</p>
+<p>I reviewed every part of the report, checked all facts and figures against my own logbook, scripts and output files, and edited the text so that it reflects my own experience. I take full responsibility for the accuracy of the content. Facts taken from outside sources are cited in APA 7th edition style and listed in the References section.</p>
+                    </div>
+                    <p class="decl-sign">&mdash; Wong Jing Quan</p>
+                </article>
+                <article class="prose-card glass-card reveal">
+                    <div class="card-head"><div class="card-icon"><i class="fas fa-book"></i></div><h3>References</h3></div>
+                    <ul class="ref-list">
+                        <li>Anthropic. (2026). <em>Claude</em> [Large language model]. <a href="https://claude.ai/" target="_blank" rel="noopener">https://claude.ai/</a></li>
+                        <li>Earnings Whispers. (n.d.). <em>Earnings Whispers</em>. Retrieved October 24, 2026, from <a href="https://www.earningswhispers.com/" target="_blank" rel="noopener">https://www.earningswhispers.com/</a></li>
+                        <li>Hong Kong Exchanges and Clearing. (n.d.). <em>CCASS shareholding search</em>. HKEXnews. Retrieved October 24, 2026, from <a href="https://www3.hkexnews.hk/sdw/search/searchsdw.aspx" target="_blank" rel="noopener">https://www3.hkexnews.hk/sdw/search/searchsdw.aspx</a></li>
+                        <li>Market Chameleon. (n.d.). <em>Market Chameleon</em>. Retrieved October 24, 2026, from <a href="https://marketchameleon.com/" target="_blank" rel="noopener">https://marketchameleon.com/</a></li>
+                        <li>Maukerja. (n.d.). <em>RHEE ANALYTICS SDN. BHD. company overview</em>. Retrieved October 7, 2026, from <a href="https://www.maukerja.my/en/company/rhee-analytics-sdn-bhd" target="_blank" rel="noopener">https://www.maukerja.my/en/company/rhee-analytics-sdn-bhd</a></li>
+                        <li>Nasdaq. (n.d.). <em>Earnings calendar</em>. Retrieved October 24, 2026, from <a href="https://www.nasdaq.com/market-activity/earnings" target="_blank" rel="noopener">https://www.nasdaq.com/market-activity/earnings</a></li>
+                        <li>Rhee Analytics Sdn. Bhd. (2026). <em>Confirmation of UUM practicum duty report: Wong Jing Quan</em> [Unpublished company document].</li>
+                        <li>Securities and Futures Commission. (n.d.). <em>Public register of licensed persons and registered institutions: Rhee Capital Limited (CE No. BPY306)</em>. Retrieved October 24, 2026, from <a href="https://apps.sfc.hk/publicregWeb/" target="_blank" rel="noopener">https://apps.sfc.hk/publicregWeb/</a></li>
+                        <li>Singapore Exchange. (n.d.-a). <em>Company announcements</em>. Retrieved October 24, 2026, from <a href="https://www.sgx.com/securities/company-announcements" target="_blank" rel="noopener">https://www.sgx.com/securities/company-announcements</a></li>
+                        <li>Singapore Exchange. (n.d.-b). <em>Stock screener</em>. Retrieved October 24, 2026, from <a href="https://www.sgx.com/securities/stock-screener" target="_blank" rel="noopener">https://www.sgx.com/securities/stock-screener</a></li>
+                        <li>TradingView. (n.d.). <em>Stock screener</em>. Retrieved October 24, 2026, from <a href="https://www.tradingview.com/screener/" target="_blank" rel="noopener">https://www.tradingview.com/screener/</a></li>
+                        <li>Yahoo Finance. (n.d.). <em>Earnings calendar</em>. Retrieved October 24, 2026, from <a href="https://finance.yahoo.com/calendar/earnings" target="_blank" rel="noopener">https://finance.yahoo.com/calendar/earnings</a></li>
+                        <li>Zacks Investment Research. (n.d.). <em>Earnings calendar</em>. Retrieved October 24, 2026, from <a href="https://www.zacks.com/earnings/earnings-calendar" target="_blank" rel="noopener">https://www.zacks.com/earnings/earnings-calendar</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">WJQ<span class="brand-dot"></span></div>
+                <p class="footer-tag">Turning raw data into <em>clarity</em>.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 Wong Jing Quan. All rights reserved.</p>
+                <p class="page-updated">Internship e-portfolio &middot; last updated 9 November 2026</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/jingquanwong" target="_blank" rel="noopener" aria-label="LinkedIn" class="magnetic"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/WONG-JING-QUAN" target="_blank" rel="noopener" aria-label="GitHub" class="magnetic"><i class="fab fa-github"></i></a>
+                <a href="mailto:wongquan23@gmail.com" aria-label="Email" class="magnetic"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/qr/3EE53P34534GM1" target="_blank" rel="noopener" aria-label="WhatsApp" class="magnetic"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-top magnetic" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="ripples" id="ripples" aria-hidden="true"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="internship.js" defer></script>
+</body>
+</html>
